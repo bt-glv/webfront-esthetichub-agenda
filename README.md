@@ -8,12 +8,32 @@
 
 ### Sobre
 - Para modificar o branch "master" (branch principal) uma pull request deve ser feita para que os commits possam ser adicionados.
+- A pull request deve ser aprovada por @bt-glv ou @joao-victor-luzia.
+
+</br>
+</br>
+
+## Comandos Angular
+
+#### Criar componente / tela
+
+```bash
+ng g c $nome_componente_aqui
+```
 
 </br>
 
-- O Branch "master" só aceita "Push" do dono do repositório.
+#### Hostear (rodar) o projeto 
 
+```bash
+ng serve
+```
 
-> teste pull request -> deletar
+</br>
 
-Meu primeiro código.
+#### instalar o angular
+
+```bash
+npm install -g @angular/cli
+```
+
