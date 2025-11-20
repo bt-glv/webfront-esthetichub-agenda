@@ -41,8 +41,9 @@ npm install -g @angular/cli
 
 #### iniciar o json-server
 
+```bash
 json-server db.json
-
+```
 
 
 
