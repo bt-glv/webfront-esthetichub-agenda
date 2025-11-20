@@ -37,3 +37,16 @@ ng serve
 npm install -g @angular/cli
 ```
 
+</br>
+
+#### iniciar o json-server
+
+json-server db.json
+
+
+
+
+
+
+
+
