@@ -8,6 +8,7 @@ Body {
     flex-direction: column;
     align-items: center;
     box-shadow: 5px 5px ; 
+    position: relative;
 
 }
 button {
@@ -27,3 +28,30 @@ button {
    
 }
 
+.campo-senha {
+  position: relative;
+  width: 50%;
+}
+
+.campo-senha input {
+  width: 100%;
+  padding-right: 40px; /* espaço para o ícone */
+}
+
+.campo-senha .toggle-eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  cursor: pointer;
+}
+
+.fechar {
+    text-align: right;
+     top: 15px;
+    right: 15px;
+    background-color: white;
+    width: 10%;    
+    position: absolute;    
+}
