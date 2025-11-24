@@ -1,0 +1,37 @@
+{
+    "proficional": [
+        {
+            "nome":     "Marco Aurélio",
+            "telefone": "31983759837",
+            "senha":    "senha123456",
+            "servicos": {
+                "corte":        55.4,
+                "barba":        22.8,
+                "Sombrancelha": 148.9
+            },
+            "agendamentos": {
+                "2025-10-30T10:30:00-03:00": "Rosilene Cotta",
+                "2025-10-30T11:30:00-03:00": "Homer do Saco"
+            }
+        }
+    ],
+    "cliente": [
+        {
+            "nome":     "Rosilene Cotta",
+            "telefone": "31985473648",
+            "senha":    "CamafeuPodre333",
+            "agendamentos": {
+                "2025-10-30T10:30:00-03:00": "Marco Aurélio"
+            }
+
+        },
+        {
+            "nome":     "Homer do Saco",
+            "telefone": "31985473648",
+            "senha":    "CamafeuPodre333",
+            "agendamentos": {
+                "2025-10-30T11:30:00-03:00": "Marco Aurélio"
+            }
+        }
+    ]
+}

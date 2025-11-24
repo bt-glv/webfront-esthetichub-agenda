@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Login } from '../../componente/login/login';
+import { PageCadastro } from '../../componente/cadastro/cadastro';
 
 @Component({
   selector: 'landing',
-  imports: [Login],
+  imports: [PageCadastro],
   templateUrl: './landing.html',
   styleUrl: './landing.css',
 })
