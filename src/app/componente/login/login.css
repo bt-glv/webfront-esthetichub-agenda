@@ -14,6 +14,7 @@ body{
     padding-top: 20px;
 }
 .login{
+    width: 70%;
     background-color: #6a4c9c;
     border-radius: 50px;
     border: none;
@@ -42,6 +43,7 @@ body{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: babackground-color 0.3s ease;
+    width: 70%;
     
 }
 .acesso:hover{
@@ -50,7 +52,7 @@ body{
 
 #cointainer-login{
     max-width: 350px;
-    width: 90%;
+    width: 100%;
     padding: 20px;
 }
 .saudacao{
@@ -87,6 +89,7 @@ body{
     font-weight: bold;
 }
 .campo-input{
+    margin-top:20px;
     position: relative;
     margin-bottom: 20px;
 }
@@ -105,7 +108,7 @@ body{
 }
 .campo-senha{
     position: relative;
-  width: 50%;
+  width: 100%;
 }
 .campo-senha input {
   width: 100%;
@@ -130,4 +133,11 @@ body{
 }
 .cadastro-link{
     color: #7d59b3;
+}
+
+.primeiraParte {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
 }
