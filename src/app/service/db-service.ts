@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root',
-})
-
 // bem provavelmente essa classe deveria estar em outro lugar
 // deixei ela aqui só pra o não dar erro nas funções abaixo
 class servico {
@@ -19,8 +15,7 @@ class servico {
     duracao: number;
 }
 
-
-
+@Injectable({ providedIn: 'root', })
 export class DbService {
 
     newCliente(
