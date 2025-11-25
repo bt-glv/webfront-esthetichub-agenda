@@ -1,36 +1,70 @@
 {
-    "proficional": [
+    "profissional": [
         {
-            "nome":     "Marco Aurélio",
+            "nome":     "Marco Aurelio",
             "telefone": "31983759837",
             "senha":    "senha123456",
-            "servicos": {
-                "corte":        55.4,
-                "barba":        22.8,
-                "Sombrancelha": 148.9
-            },
+
+            "lista_servico": [
+                { "titulo": "corte",        "preco": 55.4,  "duracao": 30 },
+                { "titulo": "barba",        "preco": 22.8,  "duracao": 45 },
+                { "titulo": "Sombrancelha", "preco": 148.9, "duracao": 60 }
+            ],
+
             "agendamentos": {
-                "2025-10-30T10:30:00-03:00": "Rosilene Cotta",
-                "2025-10-30T11:30:00-03:00": "Homer do Saco"
+                "2025-10-30T10:30:00-03:00": {
+                    "cliente": {
+                        "nome": "Rosilene Cotta",
+                        "telefone": "31985473648"
+                    },
+                    "servico": { "titulo": "corte", "preco": 55.4, "duracao": 30 }
+
+                },
+                "2025-10-30T11:30:00-03:00":{
+                    "cliente": {
+                        "nome": "Homer do Saco",
+                        "telefone": "31985473648"
+                    },
+                    "servico": { "titulo": "corte", "preco": 55.4, "duracao": 30 }
+
+                }
             }
+
         }
     ],
+
     "cliente": [
+
         {
             "nome":     "Rosilene Cotta",
             "telefone": "31985473648",
             "senha":    "CamafeuPodre333",
+
             "agendamentos": {
-                "2025-10-30T10:30:00-03:00": "Marco Aurélio"
+                "2025-10-30T10:30:00-03:00": {
+                    "profissional": {
+                        "nome": "Marco Aurelio",
+                        "telefone":"31985473648"
+                    }
+                    "servico": { "titulo": "corte", "preco": 55.4, "duracao": 30 }
+                }
             }
 
         },
+
         {
             "nome":     "Homer do Saco",
             "telefone": "31985473648",
             "senha":    "CamafeuPodre333",
+
             "agendamentos": {
-                "2025-10-30T11:30:00-03:00": "Marco Aurélio"
+                "2025-10-30T11:30:00-03:00": {
+                    "profissional": {
+                        "nome": "Marco Aurelio",
+                        "telefone":"31985473648"
+                    }
+                    "servico": { "titulo": "corte", "preco": 55.4, "duracao": 30 }
+                }
             }
         }
     ]
