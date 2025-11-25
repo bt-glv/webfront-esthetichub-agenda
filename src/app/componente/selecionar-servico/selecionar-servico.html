@@ -1,55 +1,45 @@
 <body>
-    <h2>Escolha um ou mais serviços</h2>
-    <input type="text" placeholder="Pesquise">
-
-    <ul class="intem-service">
-        <li class="servicos">
-        <input type="checkbox" id="corte_infantil" name="servico" value="corte_infantil">
-        <label for="corte_infantil" class="intem-content">
-            <div class="text_content">
-                <span class="title">CORTE INFANTIL</span>
-                <span class="subtitle">R$ 30,00</span>
-            </div>
-        </label>
-    </li>
-    </ul>
+<div class="container-servicos">
+    <h1>Escolha um ou mais serviços</h1>
     
-    <ul class="intem-service">
-        <input type="checkbox" id="hidratar" name="servico" value="hidratar">
-        <label for="hidratar" class="intem-content">
-            <div class="text_content">
-                <span class="title">HIDRATAÇÃO</span>
-                <span class="subtitle">R$ 25,00</span>
+    <input type="text" placeholder="Pesquise" class="campo-pesquisa">
+    
+    <div class="lista-servicos-simples">
+        
+        <div class="item-servico-simples linha-servico">
+            <input type="checkbox" class="checkbox-servico">
+            <div class="info-servico">
+                <span class="nome-servico">CORTE INFANTIL</span>
+                <span class="preco-servico">R$35,00</span>
             </div>
-        </label>
-    </ul>
-    <ul class="intem-service">
-        <input type="checkbox" id="sombrancelha" name="servico" value="sombrancelha">
-        <label for="sombrancelha" class="intem-content">
-            <div class="text_content">
-                <span class="title">SOMBRANCELHA</span>
-                <span class="subtitle">R$ 15,00</span>
+        </div>
+        <div class="item-servico-simples linha-servico">
+            <input type="checkbox" class="checkbox-servico">
+            <div class="info-servico">
+                <span class="nome-servico">HIDRATAÇÃO</span>
+                <span class="preco-servico">R$50,00</span>
             </div>
-        </label>
-    </ul>
-    <ul class="intem-service">
-        <input type="checkbox" id="barba" name="servico" value="barba">
-        <label for="barba" class="intem-content">
-            <div class="text_content">
-                <span class="title">BARBA</span>
-                <span class="subtitle">R$ 20,00</span>
+        </div>
+        <div class="item-servico-simples linha-servico">
+            <input type="checkbox" class="checkbox-servico">
+            <div class="info-servico">
+                <span class="nome-servico">BARBA</span>
+                <span class="preco-servico">R$35,00</span>
             </div>
-        </label>
-    </ul>
-    <ul class="intem-service">
-        <input type="checkbox" id="confirm" name="servico" value="confirm">
-        <label for="confirm" class="intem-content">
-            <div class="text_content">
-                <span class="title">CONFIRMAR</span>
+        </div>
+        <div class="item-servico-simples linha-servico">
+            <input type="checkbox" class="checkbox-servico">
+            <div class="info-servico">
+                <span class="nome-servico">SOMBRANCELHA</span>
+                <span class="preco-servico">R$20,00</span>
             </div>
-        </label>
-    </ul>
-
+        </div>
+        
+        <button type="button" class="botao-final">
+            <span class="icone-check-grande">✓</span>
+        </button>
+        
+    </div>
+</div>
 
 </body>
-
