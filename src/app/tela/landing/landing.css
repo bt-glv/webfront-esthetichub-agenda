@@ -9,16 +9,33 @@
 .header-content {
     z-index:        1;
     position:       relative;
-    align-items:    end;
-    display:        flex;
     height:         100%;
+    width:          100% !important;
     width:          fit-content;
-    flex-direction: column-reverse
+    display:        flex;
+    align-items:    end;
+    flex-direction: column-reverse;
 }
 .background-img {
     object-fit: cover;
     z-index: -1;
     padding-bottom: 5vh;
+}
+
+/* classes card base  */
+.pill-card {
+    background-color: #f6f1f8;
+    border-radius:    60px;
+    overflow:         hidden;
+
+    box-shadow:
+    0 2px 1px -1px rgba(0,0,0,0.2),
+    0 1px 1px 0 rgba(0,0,0,0.14),
+    0 1px 3px 0 rgba(0,0,0,0.12);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.box-card {
+
 }
 
 /* pilula informacoes da empresa */
@@ -37,7 +54,7 @@
     height:  118px;
     color:   black;
 
-    margin-left: 3vw;
+    /* margin-left: 3vw; */
 }
 .content-bar-inner {
     width:   100%;
@@ -67,10 +84,28 @@ p.content-bar-textarea, div.content-bar-textarea {
     margin-top:      3vh;
 }
 
+.btn-container {
+    display:         flex;
+    align-items:     center;
+    flex-direction:  row;
+    justify-content: space-between;
+    width:           100%;
+    /* height: 100%; */
+}
 
 
-.btn_agendar {
 
+.btn-agendar {
+    color:            white;
+    background-color: #664fa3;
+    border-radius:    60px;
+    overflow:         hidden;
+    display:          flex;
+    flex-direction:   row;
+    justify-content:  center;
+    justify-items:    center;
+    /* font-family: "Aboreto"; */
+    font-size:   0.9rem;
 }
 
 
