@@ -12,25 +12,28 @@ Body {
 
 }
 button {
-    padding-left: 30px;
-    background-color: rgb(105, 84, 162, 0.2108);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    background: #d4cbe5;
-    padding: 14px;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    color: #4b3f6b;
-    cursor: pointer;   
+  width: 180px;
+  height: 30px;
+  background-color: #6B4CC2; /* roxo parecido com o da imagem */
+  border-radius: 16px;
+  border: none;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* sombra suave igual da imagem */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
    
 }
 
 .campo-senha {
   position: relative;
   width: 50%;
+  border-radius: 14px;
+  
 }
 
 .campo-senha input {
