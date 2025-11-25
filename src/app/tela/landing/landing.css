@@ -1,27 +1,81 @@
+
+/* cabecalho e imagem de fundo */
 .header {
-    height: 50vh;
-    width:100%;
-    overflow:hidden;
+    height:   50vh;
+    width:    100%;
+    overflow: hidden;
     position: relative;
 }
 .header-content {
-    color:black;
-    z-index: 1;
-    position: relative;
-    display:flex;
-    flex-direction:column;
-    justify-content: flex-end;
-    height: 100%;
-    /* justify-content:left; */
-    /* align-items: flex-end; */
-}
-.content-bar {
-    display: flex;
-    flex-direction: row;
+    z-index:        1;
+    position:       relative;
+    align-items:    end;
+    display:        flex;
+    height:         100%;
+    width:          fit-content;
+    flex-direction: column-reverse
 }
 .background-img {
     object-fit: cover;
     z-index: -1;
     padding-bottom: 5vh;
 }
+
+/* pilula informacoes da empresa */
+.content-bar {
+    background-color: #f6f1f8;
+    border-radius:    60px;
+    overflow:         hidden;
+
+    box-shadow:
+    0 2px 1px -1px rgba(0,0,0,0.2),
+    0 1px 1px 0 rgba(0,0,0,0.14),
+    0 1px 3px 0 rgba(0,0,0,0.12);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+
+    width:   470px;
+    height:  118px;
+    color:   black;
+
+    margin-left: 3vw;
+}
+.content-bar-inner {
+    width:   100%;
+    height:  100%;
+    padding: 10px;
+}
+
+.content-bar-textarea {
+
+}
+.content-bar-textarea h1 {
+    font-family: "Aboreto";
+    font-size:   2rem;
+}
+p.content-bar-textarea, div.content-bar-textarea {
+    /* font-family: "Aboreto"; */
+    font-size: 0.9rem;
+}
+
+
+
+/* conteudo abaixo do banner */
+.landing-content-area {
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    margin-top:      3vh;
+}
+
+
+
+.btn_agendar {
+
+}
+
+
+
+
+
+
 
