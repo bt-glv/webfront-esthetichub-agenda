@@ -79,11 +79,12 @@ body{
 
 }
 .fechar{
-    text-align: right;
-    top: 10px;
-    right: 15px;
-    background-color: white;
-    width: 5%;    
-    position: absolute;    
-    background-color: #FF0000
+    width: 30px;
+    height: 30px;
+    background-color: white; 
+    border: 2px solid black; 
+    box-shadow: 2px 2px 0 0 black, -1px -1px 0 0 #555;
+    position: right;
+    margin-left: auto;
+    
 }
