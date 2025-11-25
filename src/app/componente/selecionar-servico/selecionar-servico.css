@@ -1,3 +1,14 @@
+
+
+.container-servicos {
+    position: relative;
+}
+
+.fechar:hover, .fechar:focus {
+    background: #f3eaff;
+    color: #7c4dff;
+    outline: none;
+}
 :root {
     --roxo-principal: #5d3596;
     --cinza-texto: #555555;
