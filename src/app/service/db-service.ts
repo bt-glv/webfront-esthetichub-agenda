@@ -1,64 +1,58 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Profissional, Cliente } from './../models';
 
-// bem provavelmente essa classe deveria estar em outro lugar
-// deixei ela aqui só pra o não dar erro nas funções abaixo
-class servico {
-
-    public constructor(titulo: string,preco:number,duracao:number ) {
-        this.titulo  = titulo
-        this.preco   = preco
-        this.duracao = duracao
-    }
-
-    titulo:  string;
-    preco:   number;
-    duracao: number;
-}
-
-@Injectable({ providedIn: 'root', })
+@Injectable({
+  providedIn: 'root'
+})
 export class DbService {
 
-    newCliente(
-        nome:     string,
-        telefone: string,
-        senha:    string,
-    ): boolean {
-        return false
-    }
+  private readonly API_URL = 'http://localhost:3000';
 
-    newProfissional(
-        nome:     string,
-        telefone: string,
-        senha:    string,
-        lista_servicos: Array<servico>,
-    ): boolean {
-        return false
-    }
+  constructor(private http: HttpClient) { }
 
-    newAgendamento(
-        profissional_numero: string,
-        cliente_numero:      string,
-        data_iso:            string
-    ): boolean {
-        return false
-    }
+  // --- PROFISSIONAL ---
+  
+  getProfissionais(): Observable<Profissional[]> {
+    return this.http.get<Profissional[]>(`${this.API_URL}/profissional`);
+  }
 
-    editAgendamento(
-        profissional_numero: string,
-        cliente_numero:      string,
-        data_iso:            string,
-        servico:             servico
-    ): boolean {
-        return false
-    }
+  getProfissionalById(id: string): Observable<Profissional> {
+    return this.http.get<Profissional>(`${this.API_URL}/profissional/${id}`);
+  }
 
-    deleteAgendamento(
-        profissional_numero: string,
-        cliente_numero:      string,
-        data_iso:            string,
-        servico:             servico
-    ): boolean {
-        return false
-    }
+  createProfissional(data: Omit<Profissional, 'id'>): Observable<Profissional> {
+    return this.http.post<Profissional>(`${this.API_URL}/profissional`, data);
+  }
 
+  updateProfissional(id: string, data: Profissional): Observable<Profissional> {
+    return this.http.put<Profissional>(`${this.API_URL}/profissional/${id}`, data);
+  }
+
+  deleteProfissional(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.API_URL}/profissional/${id}`);
+  }
+
+  // --- CLIENTE ---
+
+  getClientes(): Observable<Cliente[]> {
+    return this.http.get<Cliente[]>(`${this.API_URL}/cliente`);
+  }
+
+  getClienteById(id: string): Observable<Cliente> {
+    return this.http.get<Cliente>(`${this.API_URL}/cliente/${id}`);
+  }
+
+  createCliente(data: Omit<Cliente, 'id'>): Observable<Cliente> {
+    return this.http.post<Cliente>(`${this.API_URL}/cliente`, data);
+  }
+
+  updateCliente(id: string, data: Cliente): Observable<Cliente> {
+    return this.http.put<Cliente>(`${this.API_URL}/cliente/${id}`, data);
+  }
+
+  deleteCliente(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.API_URL}/cliente/${id}`);
+  }
 }
