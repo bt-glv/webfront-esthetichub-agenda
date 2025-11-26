@@ -1,0 +1,123 @@
+
+
+.container-servicos {
+    position: relative;
+}
+
+.fechar:hover, .fechar:focus {
+    background: #f3eaff;
+    color: #7c4dff;
+    outline: none;
+}
+:root {
+    --roxo-principal: #5d3596;
+    --cinza-texto: #555555;
+}
+.container-servicos {
+    max-width: 350px; 
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+.container-servicos h1 {
+    font-size: 24px;
+    font-weight: 600; 
+    color: #333;
+    margin-bottom: 20px;
+}
+.campo-pesquisa {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 30px; 
+}
+.lista-servicos-simples {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+.item-servico-simples {
+    margin-bottom: 15px;
+}
+
+.linha-servico {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.checkbox-servico {
+    margin-top: 2px;
+    accent-color: var(--roxo-principal);
+    width: 18px;
+    height: 18px;
+}
+
+.info-servico {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.nome-servico {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 2px;
+}
+.preco-servico {
+    font-size: 14px;
+    font-weight: normal;
+    color: #888;
+}
+.botao-final {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone-check-grande {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.botao-final:hover .icone-check-grande,
+.botao-final:focus .icone-check-grande {
+    background-color: #7c4dff;
+    box-shadow: 0 6px 12px rgba(93, 53, 150, 0.3);
+}
+body{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5%;
+    background-color: #f7f2f9;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px ;
+    position: relative;
+}
+.fechar{
+    width: 30px;
+    height: 30px;
+    background-color: white; 
+    border: 2px solid black; 
+    box-shadow: 2px 2px 0 0 black, -1px -1px 0 0 #555;
+    position: right;
+    margin-left: auto;
+}
