@@ -1,27 +1,27 @@
 <body>
-        
+
     <button class="fechar">X</button>
     <div class="primeiraParte">
-        
+
         <h2 class="saudacao">Olá!</h2>
         <h2>É bom ter você de volta</h2>
         <div class="campo-input">
             <input id="cointainer-login" type="text" placeholder="Login ou Telefone">
             <div id="separador"></div>
-        
+
             <div class="campo-senha">
                 <input type="password" placeholder="Senha">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
                 <i class="fa-solid fa-eye toggle-eye"></i>
             </div>
-        
+
             <p class="solucao">Esqueci minha senha</p>
-            <p class="cadastro">Não possui conta? <a class="cadastro-link">Cadastre-se</a></p>
+            <p class="cadastro">Não possui conta? <a class="cadastro-link" (click)="btnCadastro()">Cadastre-se</a></p>
         </div>
-        
-        <button class="login">Fazer Login</button>
+
+        <button class="login" (click)="btnLogin()">Fazer Login</button>
         <div id="separador"></div>
-        <button class="acesso">Entrar Com Google</button>
-        
+        <button class="acesso" >Entrar Com Google</button>
+
     </div>
 </body>
