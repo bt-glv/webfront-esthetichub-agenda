@@ -41,15 +41,23 @@
     position:       relative;
     height:         100%;
     width:          100% !important;
-    width:          fit-content;
     display:        flex;
     align-items:    end;
-    flex-direction: column-reverse;
+    justify-content: end;
+    flex-direction: column;
 }
 .background-img {
     object-fit: cover;
     z-index: -1;
-    padding-bottom: 5vh;
+    padding-bottom: 8.5vh;
+}
+.btn-container {
+    display:         flex;
+    align-items:     center;
+    flex-direction:  row;
+    justify-content: space-between;
+    width:           100%;
+    /* height: 100%; */
 }
 
 
@@ -59,7 +67,6 @@
     width:   470px;
     height:  118px;
     color:   black;
-
     /* margin-left: 3vw; */
 }
 .content-bar-inner {
@@ -110,18 +117,24 @@ p.content-bar-textarea, div.content-bar-textarea {
     height: 100%;
 }
 
+/* --------- */
+/* botao usuario */
+
+.btn-usuario {
+    height: 8vh;
+    width: 8rem;
+    display: flex;
+    align-items: center;
+    border-radius: 15px !important;
+}
+.container-usuario {
+    width: 100% !important;
+    height: 100% !important;
+    /* flex-direction: row-reverse; */
+}
 
 /* --------- */
 /* botao agendar */
-.btn-container {
-    display:         flex;
-    align-items:     center;
-    flex-direction:  row;
-    justify-content: space-between;
-    width:           100%;
-    /* height: 100%; */
-}
-
 
 .btn-agendar {
     color:            white;
