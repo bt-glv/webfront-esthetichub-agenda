@@ -15,7 +15,7 @@
             <div class="col-2"> </div>
             <div class="btn-agendar btn-usuario justify-content-center">
                 <img ngSrc="placeholder_usuario.png" class="rounded-circle" alt="user" width="40" height="40" style="object-fit: cover; margin-right:1rem;">
-                <u>Entrar</u>
+                <u (click)="btnLogin()" class="link-click" >Entrar</u>
             </div>
 
         </div>
@@ -38,7 +38,10 @@
                 </div>
             </div>
 
-            <div class="btn-agendar diff px-2 py-3 px-lg-2 py-lg-3 mt-4 mt-md-0">
+            <div
+                (click)="btnAgendamento()"
+                class="btn-agendar btn-nu-click diff px-2 py-3 px-lg-2 py-lg-3 mt-4 mt-md-0"
+            >
                 <i class="bi bi-clock"></i>
                 <div style="margin-left: 1vw;"> Agendar Agora </div>
             </div>

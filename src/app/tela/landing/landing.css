@@ -122,6 +122,31 @@ p.content-bar-textarea, div.content-bar-textarea {
     height: 100%;
 }
 
+
+.link-click {
+    cursor: pointer;
+}
+.link-click:hover {
+    color: #75baff;
+}
+
+/* efeito de clique para botoes roxo-nubank */
+.btn-nu-click {
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+/* mouse passa em cima */
+.btn-nu-click:hover {
+    background-color: #7c61c7;
+    transform: translateY(-2px);
+}
+/* quando esta precionado */
+.btn-nu-click:active {
+    background-color: #4f3d7e;
+    transform: translateY(0) scale(0.96);
+}
+
 /* --------- */
 /* botao usuario */
 
