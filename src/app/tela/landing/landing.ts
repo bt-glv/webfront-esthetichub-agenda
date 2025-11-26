@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { PageCadastro } from '../../componente/cadastro/cadastro';
-import { SelecionarFuncionario } from '../../componente/selecionar-funcionario/selecionar-funcionario';
-import { SelecionarHorario } from '../../componente/selecionar-horario/selecionar-horario';
+import { NavBar } from '../../componente/nav-bar/nav-bar';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'landing',
-  imports: [PageCadastro, SelecionarFuncionario, SelecionarHorario],
+  imports: [NavBar, NgOptimizedImage],
   templateUrl: './landing.html',
   styleUrl: './landing.css',
 })

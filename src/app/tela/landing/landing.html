@@ -1,12 +1,83 @@
 
-<div id="header_container" style="display:flex;">
-    <h3>landing works!</h3>
-    <div id="image">
+<div class="header">
+
+    <img
+            ngSrc="banner_barbearia.png"
+            fill
+            priority alt="Background"
+            class="background-img"
+    />
+
+    <div class="header-content">
+
+        <div class="row justify-content-between align-items-start container-usuario mx-2 mt-3">
+
+            <div class="col-2"> </div>
+            <div class="btn-agendar btn-usuario justify-content-center">
+                <img ngSrc="placeholder_usuario.png" class="rounded-circle" alt="user" width="40" height="40" style="object-fit: cover; margin-right:1rem;">
+                <u>Entrar</u>
+            </div>
+
+        </div>
+
+        <div class="btn-container row g-1 px-3">
+
+            <div class="pill-card content-bar col-10">
+                <div class="row content-bar-inner gy-0">
+
+                    <div class="col-4">
+                        <img ngSrc="unnamed.jpg" class="rounded-circle" alt="user" width="100" height="100" style="object-fit: cover;">
+                    </div>
+
+                    <div class="col-8 content-bar-textarea">
+                        <h1>Cutting Edge</h1>
+                        <div id="estrelas_dos" style="margin-top:0px">(0 Avaliações)</div>
+                        <p>R. Cobre - Cruzeiro, Belo Horizonte - MG</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="btn-agendar diff px-2 py-3 px-lg-2 py-lg-3 mt-4 mt-md-0">
+                <i class="bi bi-clock"></i>
+                <div style="margin-left: 1vw;"> Agendar Agora </div>
+            </div>
+
+        </div>
 
     </div>
-    <h1>The cutting edge</h1>
-    <cadastro></cadastro>
-    <app-selecionar-funcionario></app-selecionar-funcionario>
-    <app-selecionar-horario></app-selecionar-horario>
+
 </div>
+
+<br/>
+<div class="row landing-content-area">
+    <!-- TODO: acertar o alinhamento -->
+    <div id="coluna1" class="row col-sd-12 col-md-5 g-4 justify-content-start align-items-start">
+        <div id="sobre" class="col-12" >
+            <div class="box-card content-item full">
+                teste 1
+            </div>
+        </div>
+
+        <div id="contato" class="col-sm-12 col-md-6">
+            <div class="box-card content-item">
+                teste 2
+            </div>
+        </div>
+
+        <div id="horarios" class="col-sm-12 col-md-6">
+            <div class="box-card content-item">
+                teste 3
+            </div>
+        </div>
+    </div>
+
+    <div id="avaliacoes" class="box-card col-sd-12 col-md-7 g-4">
+        teste
+    </div>
+</div>
+
+<div style="margin-top: 20vh"></div>
+
+<!-- TODO: Criar e adicionar um componente de footer -->
 
