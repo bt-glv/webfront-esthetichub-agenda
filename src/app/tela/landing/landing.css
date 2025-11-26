@@ -1,15 +1,165 @@
-#header_container {
-    display: flex ;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    margin-left: 4vw;
-    margin-right: 4vw;
+
+/* --------- */
+/* variaveis css do componente */
+:host {
+    --fundo-card: #f7f2f9;
+    --nubank:     #664fa3;
 }
 
-#image {
-    width: 100%;
-    height: 40vh;
-    background-color: black;
+/* --------- */
+/* Cards & relacionados */
+.pill-card {
+    background-color: var(--fundo-card);
+    border-radius:    60px;
+    overflow:         hidden;
+    box-shadow:
+    0 2px 1px -1px rgba(0,0,0,0.2),
+    0 1px 1px 0 rgba(0,0,0,0.14),
+    0 1px 3px 0 rgba(0,0,0,0.12);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
+.box-card {
+    border-radius:    10px;
+    background-color: var(--fundo-card);
+    box-shadow:
+        0 2px 1px -1px rgba(0,0,0,0.2),
+        0 1px 1px 0 rgba(0,0,0,0.14),
+        0 1px 3px 0 rgba(0,0,0,0.12);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------- */
+/* cabecalho e imagem de fundo */
+.header {
+    height:   50vh;
+    width:    100%;
+    overflow: hidden;
+    position: relative;
+}
+.header-content {
+    z-index:        1;
+    position:       relative;
+    height:         100%;
+    width:          100% !important;
+    display:        flex;
+    align-items:    end;
+    justify-content: end;
+    flex-direction: column;
+}
+.background-img {
+    object-fit:     cover;
+    z-index:        -1;
+    padding-bottom: 3.5rem;
+}
+.btn-container {
+    display:         flex;
+    align-items:     center;
+    flex-direction:  row;
+    justify-content: space-between;
+    width:           100%;
+    /* height: 100%; */
+}
+
+
+/* --------- */
+/* div informacoes da empresa */
+.content-bar {
+    width:   470px;
+    height:  118px;
+    color:   black;
+    /* margin-left: 3vw; */
+}
+.content-bar-inner {
+    width:   100%;
+    height:  100%;
+    padding: 10px;
+}
+.content-bar-textarea {
+
+}
+.content-bar-textarea h1 {
+    font-family: "Aboreto";
+    font-size:   2rem;
+}
+p.content-bar-textarea, div.content-bar-textarea {
+    /* font-family: "Aboreto"; */
+    font-size: 0.9rem;
+}
+
+/* --------- */
+/* conteudo abaixo do banner */
+/* ~~body da pagina */
+.landing-content-area {
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    margin-top:      3vh;
+    margin-right:    2vw;
+    margin-left:     1vw;
+}
+
+/* #coluna1 { */
+/*     display: grid; */
+/*     flex-direction: row; */
+/* } */
+#coluna1 {
+    margin-top: 0px !important;
+}
+#sobre {
+    height: 20vh;
+}
+#horarios {
+    height: 20vh;
+}
+#contato{
+    height: 20vh;
+}
+#avaliacoes{
+    height: 40vh;
+}
+.box-card.content-item {
+    width:  100%;
+    height: 100%;
+}
+
+/* --------- */
+/* botao usuario */
+
+.btn-usuario {
+    height:        6vh;
+    width:         8rem;
+    display:       flex;
+    align-items:   center;
+    border-radius: 15px !important;
+    padding: 30px;
+}
+.container-usuario {
+    width:  100% !important;
+    height: 100% !important;
+    /* flex-direction: row-reverse; */
+}
+
+/* --------- */
+/* botao agendar */
+
+.btn-agendar.diff {
+    width: 10rem;
+}
+.btn-agendar {
+    color:            white;
+    background-color: var(--nubank);
+    border-radius:    60px;
+    overflow:         hidden;
+    display:          flex;
+    flex-direction:   row;
+    justify-content:  center;
+    justify-items:    center;
+    font-size:        0.9rem;
+}
+
+
+
+
+
+
+
