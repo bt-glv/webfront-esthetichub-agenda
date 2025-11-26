@@ -31,11 +31,21 @@ Body {
   background-color: #7d59b3;
 }
 
-.campo-senha {
-  position: relative;
+.campo-senha{
+    position: relative;
   width: 50%;
-  border-radius: 14px;
-  
+}
+.campo-senha input {
+  width: 50%;
+  padding-right: 40px; 
+}
+.campo-senha .toggle-eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  cursor: pointer;
 }
 
 .campo-senha input {
