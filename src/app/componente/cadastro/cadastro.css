@@ -11,22 +11,24 @@ Body {
     position: relative;
 
 }
-button {
-  width: 180px;
-  height: 30px;
-  background-color: #6B4CC2; /* roxo parecido com o da imagem */
-  border-radius: 16px;
-  border: none;
-  color: white;
-  font-size: 13px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  /* sombra suave igual da imagem */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-   
+.acesso {
+  background-color: rgb(105, 84, 162, 0.2108);;
+    border-radius: 50px;
+    border: none;
+    padding: 15px 40px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: babackground-color 0.3s ease;
+    width: 50%;
+}
+
+.acesso:hover {
+  background-color: #7d59b3;
 }
 
 .campo-senha {
