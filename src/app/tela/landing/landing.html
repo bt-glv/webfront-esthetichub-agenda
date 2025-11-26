@@ -1,6 +1,25 @@
 
 <div class="header">
 
+    @if (popup.enabled) {
+        <div id="popup" (click)="popup.toggle()">
+
+            <div (click)="$event.stopPropagation()">
+                @switch (popup.tela) {
+                    @case ('Login') {
+                        <app-login
+                            (open_cadastro)="abrirCadastro()"
+                            (open_agendamento)="abrirAgendamentos()"
+                        />
+                    }
+                    @case ('PageCadastro') {
+                        <cadastro/>
+                    }
+                }
+            </div>
+        </div>
+    }
+
     <img
             ngSrc="banner_barbearia.png"
             fill

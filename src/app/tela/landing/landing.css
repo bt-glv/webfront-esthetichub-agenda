@@ -182,7 +182,21 @@ p.content-bar-textarea, div.content-bar-textarea {
     font-size:        0.9rem;
 }
 
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1050;
 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    backdrop-filter: blur(3px);
+}
 
 
 
