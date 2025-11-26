@@ -19,7 +19,7 @@
     transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box-card {
-    border-radius: 10px;
+    border-radius:    10px;
     background-color: var(--fundo-card);
     box-shadow:
         0 2px 1px -1px rgba(0,0,0,0.2),
@@ -47,8 +47,8 @@
     flex-direction: column;
 }
 .background-img {
-    object-fit: cover;
-    z-index: -1;
+    object-fit:     cover;
+    z-index:        -1;
     padding-bottom: 8.5vh;
 }
 .btn-container {
@@ -113,7 +113,7 @@ p.content-bar-textarea, div.content-bar-textarea {
     height: 40vh;
 }
 .box-card.content-item {
-    width: 100%;
+    width:  100%;
     height: 100%;
 }
 
@@ -121,14 +121,14 @@ p.content-bar-textarea, div.content-bar-textarea {
 /* botao usuario */
 
 .btn-usuario {
-    height: 6vh;
-    width: 8rem;
-    display: flex;
-    align-items: center;
+    height:        6vh;
+    width:         8rem;
+    display:       flex;
+    align-items:   center;
     border-radius: 15px !important;
 }
 .container-usuario {
-    width: 100% !important;
+    width:  100% !important;
     height: 100% !important;
     /* flex-direction: row-reverse; */
 }
@@ -145,8 +145,7 @@ p.content-bar-textarea, div.content-bar-textarea {
     flex-direction:   row;
     justify-content:  center;
     justify-items:    center;
-    /* font-family: "Aboreto"; */
-    font-size:   0.9rem;
+    font-size:        0.9rem;
 }
 
 
