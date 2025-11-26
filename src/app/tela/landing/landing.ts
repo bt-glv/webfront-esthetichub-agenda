@@ -35,6 +35,7 @@ export class PageLanding {
     // chamadas botoes
     btnAgendamento() {
         console.log("agendamento")
+        this.popup.tela = 'Login'
         this.popup.toggle()
     }
 
