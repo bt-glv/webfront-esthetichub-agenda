@@ -121,7 +121,7 @@ p.content-bar-textarea, div.content-bar-textarea {
 /* botao usuario */
 
 .btn-usuario {
-    height: 8vh;
+    height: 6vh;
     width: 8rem;
     display: flex;
     align-items: center;
