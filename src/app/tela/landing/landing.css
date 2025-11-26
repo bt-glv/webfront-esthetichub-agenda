@@ -49,7 +49,7 @@
 .background-img {
     object-fit:     cover;
     z-index:        -1;
-    padding-bottom: 8.5vh;
+    padding-bottom: 3.5rem;
 }
 .btn-container {
     display:         flex;
@@ -94,12 +94,17 @@ p.content-bar-textarea, div.content-bar-textarea {
     justify-content: center;
     align-items:     center;
     margin-top:      3vh;
+    margin-right:    2vw;
+    margin-left:     1vw;
 }
 
 /* #coluna1 { */
 /*     display: grid; */
 /*     flex-direction: row; */
 /* } */
+#coluna1 {
+    margin-top: 0px !important;
+}
 #sobre {
     height: 20vh;
 }
@@ -126,6 +131,7 @@ p.content-bar-textarea, div.content-bar-textarea {
     display:       flex;
     align-items:   center;
     border-radius: 15px !important;
+    padding: 30px;
 }
 .container-usuario {
     width:  100% !important;
@@ -136,6 +142,9 @@ p.content-bar-textarea, div.content-bar-textarea {
 /* --------- */
 /* botao agendar */
 
+.btn-agendar.diff {
+    width: 10rem;
+}
 .btn-agendar {
     color:            white;
     background-color: var(--nubank);
