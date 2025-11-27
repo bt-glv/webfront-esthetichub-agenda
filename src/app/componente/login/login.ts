@@ -1,5 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,12 +14,16 @@ export class Login {
     @Output() open_agendamento = new EventEmitter<void>()
     login: string = ''
     senha: string = ''
-    
+
+    constructor(private router: Router){ }
+
     btnLogin() {
         console.log('Dados do formulário:');
         console.log('login:', this.login);
         console.log('senha:', this.senha);
-        this.open_agendamento.emit()
+        this.open_agendamento.emit();
+        this.router.navigate(['/agendamentos'])
+        // this.open_agendamento.emit()
     }
     btnCadastro() {
         this.open_cadastro.emit()
