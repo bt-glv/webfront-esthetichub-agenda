@@ -6,11 +6,11 @@
         <h2 class="saudacao">Olá!</h2>
         <h2>É bom ter você de volta</h2>
         <div class="campo-input">
-            <input id="cointainer-login" type="text" placeholder="Login ou Telefone">
+            <input id="cointainer-login" [(ngModel)]="login" type="text" placeholder="Login ou Telefone">
             <div id="separador"></div>
 
             <div class="campo-senha">
-                <input type="password" placeholder="Senha">
+                <input type="password" [(ngModel)]="senha" placeholder="Senha">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
                 <i class="fa-solid fa-eye toggle-eye"></i>
             </div>
