@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { ViewChild, ViewContainerRef } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 import { Login } from '../../componente/login/login';
 import { PageCadastro } from '../../componente/cadastro/cadastro';
