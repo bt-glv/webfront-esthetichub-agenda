@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 export class Login {
     @Output() open_cadastro    = new EventEmitter<void>()
     @Output() open_agendamento = new EventEmitter<void>()
+    @Output() fechar_tela      = new EventEmitter<void>()
+
     login: string = ''
     senha: string = ''
 
@@ -21,11 +23,11 @@ export class Login {
         console.log('Dados do formulário:');
         console.log('login:', this.login);
         console.log('senha:', this.senha);
+        console.log("a funcionalidade de login ainda nao foi implementada")
         this.open_agendamento.emit();
         this.router.navigate(['/agendamentos'])
         // this.open_agendamento.emit()
     }
-    btnCadastro() {
-        this.open_cadastro.emit()
-    }
+    btnCadastro() { this.open_cadastro.emit() }
+    btnFechar()   { this.fechar_tela.emit() }
 }
