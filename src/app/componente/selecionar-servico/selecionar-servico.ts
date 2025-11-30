@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -17,4 +17,8 @@ export class SelecionarServico {
   onFecharClick() {
     this.fechado = true;
   }
+
+  
+   @Output() fechar_tela = new EventEmitter<void>()
+    btnFechar()   { this.fechar_tela.emit() }
 }
