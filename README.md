@@ -23,18 +23,18 @@ ng g c $nome_componente_aqui
 
 </br>
 
-#### Hostear (rodar) o projeto 
-
-```bash
-ng serve
-```
-
-</br>
-
 #### instalar o angular
 
 ```bash
 npm install -g @angular/cli
+```
+
+</br>
+
+#### Hostear (rodar) o projeto 
+
+```bash
+ng serve
 ```
 
 </br>
@@ -44,12 +44,5 @@ npm install -g @angular/cli
 ```bash
 json-server db.json
 ```
-
-teste
-
-
-
-
-
 
 

@@ -10,10 +10,13 @@
                         <app-login
                             (open_cadastro)="abrirCadastro()"
                             (open_agendamento)="abrirAgendamentos()"
+                            (fechar_tela)="popup.toggle()"
                         />
                     }
                     @case ('PageCadastro') {
-                        <cadastro/>
+                        <cadastro
+                            (fechar_tela)="popup.toggle()"
+                        />
                     }
                 }
             </div>
