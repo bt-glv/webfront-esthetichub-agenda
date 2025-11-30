@@ -119,8 +119,18 @@ body{
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  width: 22px;
-  cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: #5d3596;
+    font-size: 16px;
+    padding: 4px;
+    z-index: 5;
 }
 .fechar{
     width: 30px;

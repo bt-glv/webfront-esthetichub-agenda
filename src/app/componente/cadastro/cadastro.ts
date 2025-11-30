@@ -14,6 +14,8 @@ export class PageCadastro {
     telefone: string = ''
     senha: string = ''
     senhaRepetida: string = ''
+    mostrarSenha: boolean = false;
+    mostrarSenhaRepetida: boolean = false;
 
     novoCliente: Cliente = {
         nome: '',
@@ -70,5 +72,14 @@ export class PageCadastro {
         console.log('login:', this.senhaRepetida);
         this.cadastrar();
     }
+    
+    toggleSenha() {
+        this.mostrarSenha = !this.mostrarSenha;
+    }
+
+    toggleSenhaRepetida() {
+        this.mostrarSenhaRepetida = !this.mostrarSenhaRepetida;
+    }
+    
 
 }
