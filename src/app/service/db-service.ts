@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Profissional, Cliente } from './../models';
+import { lastValueFrom, Observable } from 'rxjs';
+import { Profissional, Cliente, AgendamentoDadosProfissional, ServicoDetalhe } from './../models';
 
 @Injectable({
     providedIn: 'root'
@@ -54,5 +54,40 @@ export class DbService {
 
     deleteCliente(id: string): Observable<void> {
         return this.http.delete<void>(`${this.API_URL}/cliente/${id}`);
+    }
+
+    async arrayProfissionais(): Promise<Profissional[]> {
+        try {
+            const observable$ = this.getProfissionais();
+            const profissionais = await lastValueFrom(observable$);
+            return profissionais;
+        } catch (erro) {
+            console.error('Erro:', erro);
+            return [];
+        }
+    }
+
+    gerarAgendamentoId(idProfissional: string, servico: ServicoDetalhe, cliente: Cliente): void {
+        let agendamento: AgendamentoDadosProfissional = {
+            cliente: { 
+                nome: cliente.nome, 
+                telefone: cliente.telefone 
+            },
+            servico: servico
+        };
+        const dataAgendamento = Date.now(); // remover depois de testes, adicionar data real do agendamento como parametro.
+        const profissionalObs$ = this.getProfissionalById(idProfissional);
+        profissionalObs$.subscribe((profissional) => {
+            if (!profissional.agendamentos) {
+                profissional.agendamentos = {};
+            }
+            const idUnico = dataAgendamento.toString();
+            profissional.agendamentos[idUnico] = agendamento;
+            this.updateProfissional(idProfissional, profissional).subscribe({
+                next: () => console.log('SUCESSO! Agendamento salvo.'),
+                error: (err) => console.error('ERRO ao salvar:', err)
+            });
+        });
+
     }
 }
