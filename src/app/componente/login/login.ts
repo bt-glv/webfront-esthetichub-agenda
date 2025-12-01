@@ -19,6 +19,7 @@ export class Login {
 
     login: string = ''
     senha: string = ''
+  mostrarSenha: boolean = false;
 
     constructor(private router: Router, private dbService: DbService){ }
 
@@ -39,4 +40,8 @@ export class Login {
         })
         this.dbService.gerarAgendamentoId("1", { titulo: "Corte", preco: 50, duracao: 30 }, { nome: "João", telefone: "9999-8888", senha: "", agendamentos: {} } as Cliente);
     }
+
+  toggleSenha() {
+    this.mostrarSenha = !this.mostrarSenha;
+  }
 }

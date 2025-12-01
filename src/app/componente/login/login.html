@@ -10,9 +10,10 @@
             <div id="separador"></div>
 
             <div class="campo-senha">
-                <input type="password" [(ngModel)]="senha" placeholder="Senha">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-                <i class="fa-solid fa-eye toggle-eye"></i>
+                <input [type]="mostrarSenha ? 'text' : 'password'" [(ngModel)]="senha" placeholder="Senha">
+                <button type="button" class="toggle-eye" (click)="toggleSenha()" aria-label="Mostrar/ocultar senha">
+                    <i class="bi {{ mostrarSenha ? 'bi-eye-slash' : 'bi-eye' }}"></i>
+                </button>
             </div>
 
             <p class="solucao">Esqueci minha senha</p>

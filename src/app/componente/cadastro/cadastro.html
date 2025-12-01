@@ -12,16 +12,19 @@
             <input [(ngModel)]="telefone" type="tel" placeholder="telefone">
         </div>
         <br>
-        <div class="campo-senha">
-            <input [(ngModel)]="senha" type="text" placeholder="senha">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-            <i class="fa-solid fa-eye toggle-eye"></i>
-        </div>
+            <div class="campo-senha">
+                <input [(ngModel)]="senha" [type]="mostrarSenha ? 'text' : 'password'" placeholder="senha">
+                <!-- botão olho -->
+                <button type="button" class="toggle-eye" (click)="toggleSenha()" aria-label="Mostrar/ocultar senha">
+                    <i class="bi {{ mostrarSenha ? 'bi-eye-slash' : 'bi-eye' }}"></i>
+                </button>
+            </div>
         <br>
         <div class="campo-senha">
-            <input [(ngModel)]="senhaRepetida" type="text" placeholder="Repetir senha">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-            <i class="fa-solid fa-eye toggle-eye"></i>
+            <input [(ngModel)]="senhaRepetida" [type]="mostrarSenhaRepetida ? 'text' : 'password'" placeholder="Repetir senha">
+            <button type="button" class="toggle-eye" (click)="toggleSenhaRepetida()" aria-label="Mostrar/ocultar repetir senha">
+                <i class="bi {{ mostrarSenhaRepetida ? 'bi-eye-slash' : 'bi-eye' }}"></i>
+            </button>
         </div>
         <br>
         <button (click)="btnCadastrar()" class="acesso">Cadastrar </button>
