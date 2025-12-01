@@ -22,7 +22,7 @@ export interface AgendamentoDadosCliente {
 }
 
 export interface Profissional {
-  id: string; 
+  id?: string; 
   nome: string;
   telefone: string;
   senha: string;
@@ -31,7 +31,7 @@ export interface Profissional {
 }
 
 export interface Cliente {
-  id: string;
+  id?: string;
   nome: string;
   telefone: string;
   senha: string;

@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { PageLanding } from './tela/landing/landing';
-import { PageCadastro } from './componente/cadastro/cadastro';
+import { Agendamentos } from './tela/agendamentos/agendamentos';
 
 export const routes: Routes = [
     {
@@ -8,7 +8,7 @@ export const routes: Routes = [
         component: PageLanding,
     },
     {
-        path: "cadastro",
-        component: PageCadastro
+        path: "agendamentos",
+        component: Agendamentos
     },
 ];

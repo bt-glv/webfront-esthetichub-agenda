@@ -1,4 +1,4 @@
-Body {
+body{
     margin: 20px;
     padding: 20px;
     border-radius: 5%;
@@ -7,37 +7,113 @@ Body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 5px 5px ; 
+    box-shadow: 5px 5px ;
     position: relative;
-
 }
-button {
-    padding-left: 30px;
-    background-color: rgb(105, 84, 162, 0.2108);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    background: #d4cbe5;
-    padding: 14px;
+#separador{
+    padding-top: 20px;
+}
+.login{
+    width: 70%;
+    background-color: #6a4c9c;
+    border-radius: 50px;
     border: none;
-    border-radius: 30px;
+    padding: 15px 40px;
+    color: #f0f0f0;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: babackground-color 0.3s ease;
+    
+}
+.login:hover{
+    background-color: #7d59b3;
+}
+.acesso{
+    background-color: rgb(105, 84, 162, 0.2108);;
+    border-radius: 50px;
+    border: none;
+    padding: 15px 40px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: babackground-color 0.3s ease;
+    width: 100%;
+    
+}
+.acesso:hover{
+    background-color: #7d59b3;
+}
+
+#cointainer-login{
+    max-width: 350px;
+    width: 100%;
+    padding: 20px;
+}
+.saudacao{
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 5px;
+}
+.solucao{
     font-size: 16px;
-    color: #4b3f6b;
-    cursor: pointer;   
-   
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #6a4c9c; 
+    text-decoration: none; 
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    display: block; 
+    text-align: left;
 }
-
-.campo-senha {
-  position: relative;
-  width: 50%;
+.solucao:hover{
+    text-decoration: underline;
 }
-
+.cadastro{
+    margin-top: 50px;
+    text-align: center; 
+    font-size: 14px;
+    color: #555;
+}
+.cadastro a{
+    color: #6a4c9c; 
+    text-decoration: none;
+    font-weight: bold;
+}
+.campo-input{
+    margin-top:20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.campo-input input{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px 10px;
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+}
+.campo-input input::placeholder{
+    color: #888;
+}
+.campo-senha{
+    position: relative;
+  width: 100%;
+}
 .campo-senha input {
   width: 100%;
-  padding-right: 40px; /* espaço para o ícone */
+  padding-right: 40px; 
 }
-
 .campo-senha .toggle-eye {
   position: absolute;
   right: 10px;
@@ -46,12 +122,22 @@ button {
   width: 22px;
   cursor: pointer;
 }
+.fechar{
+    width: 30px;
+    height: 30px;
+    background-color: white; 
+    border: 2px solid black; 
+    box-shadow: 2px 2px 0 0 black, -1px -1px 0 0 #555;
+    position: right;
+    margin-left: auto;
+}
+.cadastro-link{
+    color: #7d59b3;
+}
 
-.fechar {
-    text-align: right;
-     top: 15px;
-    right: 15px;
-    background-color: white;
-    width: 10%;    
-    position: absolute;    
+.primeiraParte {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
 }

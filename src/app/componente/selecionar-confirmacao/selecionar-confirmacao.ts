@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-selecionar-confirmacao',
@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './selecionar-confirmacao.css',
 })
 export class SelecionarConfirmacao {
+
+
+  @Output() fechar_tela = new EventEmitter<void>()
+    btnFechar()   { this.fechar_tela.emit() }
+
   
 }
