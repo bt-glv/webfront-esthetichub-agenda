@@ -13,33 +13,33 @@ import { Cliente } from '../../models';
   styleUrl: './login.css',
 })
 export class Login {
-    @Output() open_cadastro    = new EventEmitter<void>()
-    @Output() open_agendamento = new EventEmitter<void>()
-    @Output() fechar_tela      = new EventEmitter<void>()
+  @Output() open_cadastro    = new EventEmitter<void>()
+  @Output() open_agendamento = new EventEmitter<void>()
+  @Output() fechar_tela      = new EventEmitter<void>()
 
-    login: string = ''
-    senha: string = ''
-  mostrarSenha: boolean = false;
+  login: string = ''
+  senha: string = ''
+mostrarSenha: boolean = false;
 
-    constructor(private router: Router, private dbService: DbService){ }
+  constructor(private router: Router, private dbService: DbService){ }
 
-    btnLogin() {
-        console.log('Dados do formulário:');
-        console.log('login:', this.login);
-        console.log('senha:', this.senha);
-        console.log("a funcionalidade de login ainda nao foi implementada")
-        this.open_agendamento.emit();
-        this.router.navigate(['/agendamentos'])
-        // this.open_agendamento.emit()
-    }
-    btnCadastro() { this.open_cadastro.emit() }
-    btnFechar()   { this.fechar_tela.emit() }
-    btnTeste() {
-        this.dbService.arrayProfissionais().then((profissionais) =>{
-            console.log(profissionais);
-        })
-        this.dbService.gerarAgendamentoId("1", { titulo: "Corte", preco: 50, duracao: 30 }, { nome: "João", telefone: "9999-8888", senha: "", agendamentos: {} } as Cliente);
-    }
+  btnLogin() {
+      console.log('Dados do formulário:');
+      console.log('login:', this.login);
+      console.log('senha:', this.senha);
+      console.log("a funcionalidade de login ainda nao foi implementada")
+      this.open_agendamento.emit();
+      this.router.navigate(['/agendamentos'])
+      // this.open_agendamento.emit()
+  }
+  btnCadastro() { this.open_cadastro.emit() }
+  btnFechar()   { this.fechar_tela.emit() }
+  btnTeste() {
+      this.dbService.arrayProfissionais().then((profissionais) =>{
+          console.log(profissionais);
+      })
+      this.dbService.gerarAgendamentoId("1", "7c97", { titulo: "Corte", preco: 50, duracao: 30 });
+  }
 
   toggleSenha() {
     this.mostrarSenha = !this.mostrarSenha;
