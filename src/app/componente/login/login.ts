@@ -16,6 +16,7 @@ export class Login {
 
     login: string = ''
     senha: string = ''
+  mostrarSenha: boolean = false;
 
     constructor(private router: Router){ }
 
@@ -30,4 +31,8 @@ export class Login {
     }
     btnCadastro() { this.open_cadastro.emit() }
     btnFechar()   { this.fechar_tela.emit() }
+
+  toggleSenha() {
+    this.mostrarSenha = !this.mostrarSenha;
+  }
 }

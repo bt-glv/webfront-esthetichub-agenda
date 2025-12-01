@@ -107,20 +107,35 @@ body{
     color: #888;
 }
 .campo-senha{
-    position: relative;
+  position: relative;
   width: 100%;
 }
 .campo-senha input {
   width: 100%;
-  padding-right: 40px; 
+  padding-right: 48px; 
 }
 .campo-senha .toggle-eye {
   position: absolute;
-  right: 10px;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
-  width: 22px;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
   cursor: pointer;
+  z-index: 5; 
+}
+
+.campo-senha .toggle-eye:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(93,53,150,0.12);
+    border-radius: 6px;
 }
 .fechar{
     width: 30px;
@@ -140,4 +155,24 @@ body{
      align-items: center;
      justify-content: center;
      flex-direction: column;
+}
+.campo-senha .toggle-eye i {
+  font-size: 18px;
+  color: #5d3596; /* cor do ícone (use sua variável se tiver) */
+  line-height: 1;
+  display: inline-block;
+  pointer-events: none; /* clique passa para o botão */
+}
+
+/* hover / foco para melhorar feedback visual e acessibilidade */
+.campo-senha .toggle-eye:hover i,
+.campo-senha .toggle-eye:focus i {
+  color: #7c4dff;
+}
+
+/* foco do botão (para teclado) */
+.campo-senha .toggle-eye:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(93,53,150,0.12);
+  border-radius: 6px;
 }
