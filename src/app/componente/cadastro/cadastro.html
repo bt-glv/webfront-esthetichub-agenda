@@ -1,29 +1,29 @@
 
-<body>   
-<button class="fechar">×</button>
+<body>
+<button class="fechar" (click)="btnFechar()">×</button>
 <h2>Seja bem vindo!</h2>
     <h2>Cadastro</h2>
     <div class="campo-input">
         <div>
             <input [(ngModel)]="nome" type="text" placeholder="nome">
         </div>
-        <br>   
+        <br>
         <div>
             <input [(ngModel)]="telefone" type="tel" placeholder="telefone">
         </div>
         <br>
         <div class="campo-senha">
-            <input [(ngModel)]="senha" type="text" placeholder="senha">        
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-            <i class="fa-solid fa-eye toggle-eye"></i>
-        </div>    
-        <br>
-        <div class="campo-senha">
-            <input [(ngModel)]="senhaRepetida" type="text" placeholder="Repetir senha">       
+            <input [(ngModel)]="senha" type="text" placeholder="senha">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
             <i class="fa-solid fa-eye toggle-eye"></i>
         </div>
         <br>
-        <button (click)="btnCadastrar()" class="acesso">Cadastrar </button> 
+        <div class="campo-senha">
+            <input [(ngModel)]="senhaRepetida" type="text" placeholder="Repetir senha">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+            <i class="fa-solid fa-eye toggle-eye"></i>
+        </div>
+        <br>
+        <button (click)="btnCadastrar()" class="acesso">Cadastrar </button>
    </div>
 </body>

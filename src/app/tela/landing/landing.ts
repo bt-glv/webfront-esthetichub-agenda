@@ -14,8 +14,6 @@ import { PageCadastro } from '../../componente/cadastro/cadastro';
   styleUrl: './landing.css',
 })
 export class PageLanding {
-
-
     popup = {
         enabled: true,
         tela: 'Login',
