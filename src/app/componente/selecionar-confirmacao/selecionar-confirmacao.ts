@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './selecionar-confirmacao.css',
 })
 export class SelecionarConfirmacao {
-
+  
 }
