@@ -7,10 +7,36 @@ import { SelecionarConfirmacao } from '../../componente/selecionar-confirmacao/s
 
 @Component({
   selector: 'app-agendamentos',
-  imports: [NavBar, SelecionarHorario, SelecionarServico, SelecionarFuncionario, SelecionarConfirmacao],
+  imports: [
+      NavBar,
+      SelecionarHorario,
+      SelecionarServico,
+      SelecionarFuncionario,
+      SelecionarConfirmacao
+  ],
+
   templateUrl: './agendamentos.html',
   styleUrl: './agendamentos.css',
 })
 export class Agendamentos {
+
+    popup = {
+        enabled: true,
+        tela:    'profissional',
+
+        toggle()  {
+            this.enabled = !this.enabled
+        },
+
+        reset() {
+            this.tela = 'profissional'
+            this.enabled = !this.enabled
+        },
+
+        // TODO: adicionar uma forma de checar se a tela existe
+        trocar_tela(nome_tela: string) {
+            this.tela = nome_tela
+        }
+    }
 
 }
