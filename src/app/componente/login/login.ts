@@ -38,7 +38,7 @@ mostrarSenha: boolean = false;
       this.dbService.arrayProfissionais().then((profissionais) =>{
           console.log(profissionais);
       })
-      this.dbService.gerarAgendamentoId("1", { titulo: "Corte", preco: 50, duracao: 30 }, { nome: "João", telefone: "9999-8888", senha: "", agendamentos: {} } as Cliente);
+      this.dbService.gerarAgendamentoId("1", "7c97", { titulo: "Corte", preco: 50, duracao: 30 });
   }
 
   toggleSenha() {
