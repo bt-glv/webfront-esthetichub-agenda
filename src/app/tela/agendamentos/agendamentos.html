@@ -1,15 +1,48 @@
-
 <app-nav-bar></app-nav-bar>
 
-<div class="row" style="background-color: black; width: 100%; height: 100%;">
+@if (popup.enabled) {
+    <div id="popup" (click)="popup.toggle()">
 
+        <div (click)="$event.stopPropagation()">
+            @switch (popup.tela){
+                @case('profissional'){
+                    <app-selecionar-funcionario
+                        (fechar_tela)="popup.toggle()"
+                        (proxima_tela)='popup.trocar_tela("servico")'
+                        />
+                }
+                @case('servico'){
+                    <app-selecionar-servico
+                        (fechar_tela)="popup.toggle()"
+                        (proxima_tela)='popup.trocar_tela("horario")'
+                        />
+                }
+                @case('horario'){
+                    <app-selecionar-horario
+                        (fechar_tela)="popup.toggle()"
+                        (proxima_tela)='popup.trocar_tela("confirmacao")'
+                        />
+                }
+                @case('confirmacao'){
+                    <app-selecionar-confirmacao
+                        (fechar_tela)="popup.toggle()"
+                        (proxima_tela)='popup.toggle()'
+                        />
+                }
+            }
+        </div>
+    </div>
+}
+
+<div class="agendamento-content row flex-column justify-content-center align-items-center" style="">
+
+<div class="col-2">
+<p>botão temporário</p>
 </div>
 
-<div class="agendamento-content" style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-    <app-selecionar-funcionario></app-selecionar-funcionario>
-    <app-selecionar-servico></app-selecionar-servico>
-    <app-selecionar-horario></app-selecionar-horario>
-    <app-selecionar-confirmacao></app-selecionar-confirmacao>
+<div class="btn-nubank col-2" (click)="popup.reset()">
+abrir popup
+</div>
 </div>
 
 

@@ -1,14 +1,15 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { PopupCard } from '../popupCard';
 
 @Component({
-  selector: 'app-selecionar-funcionario',
-  imports: [],
-  templateUrl: './selecionar-funcionario.html',
-  styleUrl: './selecionar-funcionario.css',
+    selector:    'app-selecionar-funcionario',
+    imports:     [],
+    templateUrl: './selecionar-funcionario.html',
+    styleUrl:    './selecionar-funcionario.css',
 })
-export class SelecionarFuncionario {
+export class SelecionarFuncionario extends PopupCard {
 
-   @Output() fechar_tela = new EventEmitter<void>()
-    btnFechar()   { this.fechar_tela.emit() }
-
+    constructor() {
+        super();
+    }
 }

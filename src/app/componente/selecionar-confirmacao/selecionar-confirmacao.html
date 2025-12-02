@@ -1,39 +1,39 @@
 <body>
-     <button class="fechar" id="fecharElemento" (click)="btnFechar()">X</button>
-     
+    <button class="fechar" id="fecharElemento" (click)="btnFechar($event)">X</button>
+
     <h2>Confirme seu agendamento</h2>
     <div class="card-container">
-    <div class="card">
-        <div class="card-icon">
-            <i class="fas fa-cut"></i>
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-cut"></i>
+            </div>
+            <div class="card-text">
+                BARBA
+            </div>
         </div>
-        <div class="card-text">
-            BARBA
-        </div>
-    </div>
 
 
-<div class="card">
-        <div class="card-icon">
-            <i class="fas fa-calendar-alt"></i>
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+            <div class="card-text">
+                Qua. 26/11/2025
+            </div>
         </div>
-        <div class="card-text">
-            Qua. 26/11/2025
-        </div>
-    </div>
 
-    <div class="card">
-        <div class="card-icon">
-            <i class="fas fa-clock"></i>
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-clock"></i>
+            </div>
+            <div class="card-text">
+                09:00
+            </div>
         </div>
-        <div class="card-text">
-            09:00
-        </div>
-    </div>
     </div>
 
     <div class="botoes-container">
-    <button class="btn_corrigir">Corrigir Agendamento </button>
-    <button class="btn_confirmar">Confirmar Agendamento </button>
+        <button class="btn_corrigir">Corrigir Agendamento </button>
+        <button class="btn_confirmar" (click)="btnProximaTela($event)">Confirmar Agendamento </button>
     </div>
-   
+

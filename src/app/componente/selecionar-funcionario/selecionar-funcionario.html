@@ -1,44 +1,45 @@
 
 <body>
 
-    <button class="fechar"  (click)="btnFechar()">×</button>
-<h4>Escolha um funcionário...</h4>
- <!-- <div>
+    <button class="fechar"  (click)="btnFechar($event)">×</button>
+    <h4>Escolha um funcionário...</h4>
+    <!-- <div>
         <input type="text" placeholder="Mayke(Barbeiro)">
-    </div> -->
+        </div> -->
 
-<div class="option-box">
-  <label class="tag-checkbox">
-    <input type="checkbox" />
-    <span class="custom-box">✓</span>
-    Mayke (Barbeiro)
-  </label>
-</div>
-     <br>   
-   <div class="option-box">
-  <label class="tag-checkbox">
-    <input type="checkbox" />
-    <span class="custom-box">✓</span>
-    Amanda (Cabelereira)
-  </label>
-</div>
-    <br>
-    <div class="worker-box">
-  <label class="worker-option">
-    <input type="checkbox" />
-    <span class="worker-check">✓</span>
-    Ricardo (Barbeiro)
-  </label>
-</div>
-    <br>
-    <div class="option-box">
-  <label class="tag-checkbox">
-    <input type="checkbox" />
-    <span class="custom-box">✓</span>
-   Jaqueline (Cabelereira)
-  </label>
-</div>
-    <br>
-    <button class="round-btn">  ✓ </button> 
+        <div class="option-box">
+            <label class="tag-checkbox">
+                <input type="checkbox" />
+                <span class="custom-box">✓</span>
+                Mayke (Barbeiro)
+            </label>
+        </div>
+        <br>
+        <div class="option-box">
+            <label class="tag-checkbox">
+                <input type="checkbox" />
+                <span class="custom-box">✓</span>
+                Amanda (Cabelereira)
+            </label>
+        </div>
+        <br>
+        <div class="worker-box">
+            <label class="worker-option">
+                <input type="checkbox" />
+                <span class="worker-check">✓</span>
+                Ricardo (Barbeiro)
+            </label>
+        </div>
+        <br>
+        <div class="option-box">
+            <label class="tag-checkbox">
+                <input type="checkbox" />
+                <span class="custom-box">✓</span>
+                Jaqueline (Cabelereira)
+            </label>
+        </div>
+        <br>
 
-    </body>
+        <button class="round-btn" (click)="btnProximaTela($event)">  ✓ </button>
+
+</body>
