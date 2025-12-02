@@ -11,7 +11,7 @@ export class SelecionarFuncionario {
     // envia o evento de fechar o componente
     @Output() fechar_tela = new EventEmitter<void>()
     btnFechar(event: Event)   {
-        event.stopPropagation()
+        event.stopPropagation() // não é necessário em todo o caso, mas é uma boa pratica
         this.fechar_tela.emit()
     }
 
