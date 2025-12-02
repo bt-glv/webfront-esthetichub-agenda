@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PopupCard } from '../popupCard';
 
 @Component({
     selector: 'app-selecionar-servico',
@@ -7,28 +8,22 @@ import { CommonModule } from '@angular/common';
     templateUrl: './selecionar-servico.html',
     styleUrl: './selecionar-servico.css',
 })
-export class SelecionarServico {
+export class SelecionarServico extends PopupCard {
     fechado = false;
 
     onFinalizarClick() {
         alert('Serviços selecionados!');
     }
-
     onFecharClick() {
         this.fechado = true;
     }
 
+    // olhar "popupCard.ts" para a funcionalidade dos botões
 
-    @Output() fechar_tela = new EventEmitter<void>()
-    btnFechar(event: Event)   {
-        event.stopPropagation()
-        this.fechar_tela.emit()
-    }
+    // override btnProximaTela(event: Event) {
+    //     event.stopPropagation()
+    //     this.proxima_tela.emit()
+    //     // this.onFinalizarClick()
+    // }
 
-    @Output() proxima_tela = new EventEmitter<void>()
-    btnProximaTela(event: Event) {
-        event.stopPropagation()
-        this.proxima_tela.emit()
-        // this.onFinalizarClick()
-    }
 }

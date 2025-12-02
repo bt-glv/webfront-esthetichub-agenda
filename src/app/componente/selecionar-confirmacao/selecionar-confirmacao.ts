@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { PopupCard } from '../popupCard';
 
 @Component({
     selector: 'app-selecionar-confirmacao',
@@ -6,18 +7,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
     templateUrl: './selecionar-confirmacao.html',
     styleUrl: './selecionar-confirmacao.css',
 })
-export class SelecionarConfirmacao {
+export class SelecionarConfirmacao extends PopupCard {
 
-    @Output() fechar_tela = new EventEmitter<void>()
-    btnFechar(event: Event)   {
-        event.stopPropagation()
-        this.fechar_tela.emit()
-    }
+    // olhar "popupCard.ts" para a funcionalidade dos botões
 
-    @Output() proxima_tela = new EventEmitter<void>()
-    btnProximaTela(event: Event) {
-        event.stopPropagation()
-        this.proxima_tela.emit()
-    }
+    // override btnProximaTela(event: Event) {
+    //     event.stopPropagation()
+    //     this.proxima_tela.emit()
+    //     // this.onFinalizarClick()
+    // }
 
 }

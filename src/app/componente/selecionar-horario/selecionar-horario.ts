@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { PopupCard } from '../popupCard';
 
 @Component({
     selector: 'app-selecionar-horario',
@@ -6,17 +7,13 @@ import { Component, EventEmitter, Output } from '@angular/core';
     templateUrl: './selecionar-horario.html',
     styleUrl: './selecionar-horario.css',
 })
-export class SelecionarHorario {
+export class SelecionarHorario extends PopupCard {
 
-    @Output() fechar_tela = new EventEmitter<void>()
-    btnFechar(event: Event)   {
-        event.stopPropagation()
-        this.fechar_tela.emit()
-    }
+    // olhar "popupCard.ts" para a funcionalidade dos botões
 
-    @Output() proxima_tela = new EventEmitter<void>()
-    btnProximaTela(event: Event) {
-        event.stopPropagation()
-        this.proxima_tela.emit()
-    }
+    // override btnProximaTela(event: Event) {
+    //     event.stopPropagation()
+    //     this.proxima_tela.emit()
+    //     // this.onFinalizarClick()
+    // }
 }
