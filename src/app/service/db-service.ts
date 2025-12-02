@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { lastValueFrom, Observable } from 'rxjs';
-import { Profissional, Cliente, AgendamentoDadosProfissional, ServicoDetalhe } from './../models';
+import { firstValueFrom, forkJoin, lastValueFrom, Observable } from 'rxjs';
+import { Profissional, Cliente, AgendamentoDadosProfissional, ServicoDetalhe, AgendamentoDadosCliente } from './../models';
 
 @Injectable({
     providedIn: 'root'
@@ -67,27 +67,62 @@ export class DbService {
         }
     }
 
-    gerarAgendamentoId(idProfissional: string, servico: ServicoDetalhe, cliente: Cliente): void {
-        let agendamento: AgendamentoDadosProfissional = {
-            cliente: { 
-                nome: cliente.nome, 
-                telefone: cliente.telefone 
-            },
-            servico: servico
-        };
-        const dataAgendamento = Date.now(); // remover depois de testes, adicionar data real do agendamento como parametro.
-        const profissionalObs$ = this.getProfissionalById(idProfissional);
-        profissionalObs$.subscribe((profissional) => {
-            if (!profissional.agendamentos) {
-                profissional.agendamentos = {};
-            }
-            const idUnico = dataAgendamento.toString();
-            profissional.agendamentos[idUnico] = agendamento;
-            this.updateProfissional(idProfissional, profissional).subscribe({
-                next: () => console.log('SUCESSO! Agendamento salvo.'),
-                error: (err) => console.error('ERRO ao salvar:', err)
-            });
-        });
+    gerarAgendamentoId(idProfissional: string, idCliente: string, servico: ServicoDetalhe): void {
+        const dataAgendamento = Date.now(); 
+        const idUnico = dataAgendamento.toString();
 
+        forkJoin({
+            cliente: this.getClienteById(idCliente),
+            profissional: this.getProfissionalById(idProfissional)
+        }).subscribe({
+            next: (dados) => {
+                const cliente = dados.cliente;
+                const profissional = dados.profissional;
+                if (!cliente || !profissional) {
+                    console.error('Cliente ou Profissional não encontrados');
+                    return;
+                }
+                const dadosParaProfissional: AgendamentoDadosProfissional = {
+                    cliente: { 
+                        nome: cliente.nome, 
+                        telefone: cliente.telefone 
+                    },
+                    servico: servico
+                };
+                if (!profissional.agendamentos) profissional.agendamentos = {};
+                profissional.agendamentos[idUnico] = dadosParaProfissional;
+                const dadosParaCliente: AgendamentoDadosCliente = {
+                    profissional: { 
+                        nome: profissional.nome, 
+                        telefone: profissional.telefone 
+                    },
+                    servico: servico
+                };
+                if (!cliente.agendamentos) cliente.agendamentos = {};
+                cliente.agendamentos[idUnico] = dadosParaCliente;
+                this.salvarAlteracoes(idProfissional, profissional, idCliente, cliente);
+            },
+            error: (err) => {
+                console.error('Erro ao carregar dados iniciais:', err);
+            }
+        });
+    }
+    salvarAlteracoes(idProf: string, prof: Profissional, idCli: string, cli: Cliente) {
+        forkJoin([
+            this.updateProfissional(idProf, prof),
+            this.updateCliente(idCli, cli)
+        ]).subscribe({
+            next: () => console.log('SUCESSO TOTAL! Ambos os agendamentos salvos.'),
+            error: (err) => console.error('ERRO ao salvar as atualizações:', err)
+        });
+    }
+
+    async checaUsuario(login: string, senha: string): Promise<Cliente | boolean> {
+        const array = await firstValueFrom(this.getClientes());
+        
+        const usuarioEncontrado = array.find(element => 
+            element.nome === login && element.senha === senha
+        );
+        return usuarioEncontrado || false; 
     }
 }
