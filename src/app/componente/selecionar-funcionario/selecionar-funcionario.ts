@@ -10,10 +10,16 @@ export class SelecionarFuncionario {
 
     // envia o evento de fechar o componente
     @Output() fechar_tela = new EventEmitter<void>()
-    btnFechar()   { this.fechar_tela.emit() }
+    btnFechar(event: Event)   {
+        event.stopPropagation()
+        this.fechar_tela.emit()
+    }
 
     // envia o evento para passar para o próximo componente
     @Output() proxima_tela = new EventEmitter<void>()
-    btnProximaTela(){ this.proxima_tela.emit() }
+    btnProximaTela(event: Event){
+        event.stopPropagation()
+        this.proxima_tela.emit()
+    }
 
 }

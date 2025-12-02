@@ -2,44 +2,47 @@
 
 @if (popup.enabled) {
     <div id="popup" (click)="popup.toggle()">
-        @switch (popup.tela){
-            @case('profissional'){
-                <app-selecionar-funcionario
-                    (fechar_tela)="popup.toggle()"
-                    (proxima_tela)='popup.trocar_tela("servico")'
-                />
+
+        <div (click)="$event.stopPropagation()">
+            @switch (popup.tela){
+                @case('profissional'){
+                    <app-selecionar-funcionario
+                        (fechar_tela)="popup.toggle()"
+                        (proxima_tela)='popup.trocar_tela("servico")'
+                        />
+                }
+                @case('servico'){
+                    <app-selecionar-servico
+                        (fechar_tela)="popup.toggle()"
+                        (proxima_tela)='popup.trocar_tela("horario")'
+                        />
+                }
+                @case('horario'){
+                    <app-selecionar-horario
+                        (fechar_tela)="popup.toggle()"
+                        (proxima_tela)='popup.trocar_tela("confirmacao")'
+                        />
+                }
+                @case('confirmacao'){
+                    <app-selecionar-confirmacao
+                        (fechar_tela)="popup.toggle()"
+                        (proxima_tela)='popup.toggle()'
+                        />
+                }
             }
-            @case('servico'){
-                <app-selecionar-servico
-                    (fechar_tela)="popup.toggle()"
-                    (proxima_tela)='popup.trocar_tela("horario")'
-                />
-            }
-            @case('horario'){
-                <app-selecionar-horario
-                    (fechar_tela)="popup.toggle()"
-                    (proxima_tela)='popup.trocar_tela("confirmacao")'
-                />
-            }
-            @case('confirmacao'){
-                <app-selecionar-confirmacao
-                    (fechar_tela)="popup.toggle()"
-                    (proxima_tela)='popup.toggle()'
-                />
-            }
-        }
+        </div>
     </div>
 }
 
 <div class="agendamento-content row flex-column justify-content-center align-items-center" style="">
 
-    <div class="col-2">
-        <p>botão temporário</p>
-    </div>
+<div class="col-2">
+<p>botão temporário</p>
+</div>
 
-    <div class="btn-nubank col-2" (click)="popup.reset()">
-        abrir popup
-    </div>
+<div class="btn-nubank col-2" (click)="popup.reset()">
+abrir popup
+</div>
 </div>
 
 
