@@ -1,11 +1,11 @@
 
 <body>
 
-    <button class="fechar"  (click)="btnFechar()">×</button>
-<h4>Escolha um funcionário...</h4>
- <!-- <div>
+    <button class="fechar"  (click)="btnFechar($event)">×</button>
+    <h4>Escolha um funcionário...</h4>
+    <!-- <div>
         <input type="text" placeholder="Mayke(Barbeiro)">
-    </div> -->
+        </div> -->
 
 <div class="option-box">
   <label class="tag-checkbox">
@@ -41,4 +41,6 @@
     <br>
     <button class="round-btn">  ✓ </button> 
 
-    </body>
+        <button class="round-btn" (click)="btnProximaTela($event)">  ✓ </button>
+
+</body>

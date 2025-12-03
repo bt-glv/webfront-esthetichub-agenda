@@ -1,0 +1,64 @@
+
+:host {
+    --fundo-card: #f7f2f9;
+    --nubank:     #664fa3;
+}
+
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1050;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    backdrop-filter: blur(3px);
+}
+
+
+/* css do botao */
+.btn-nubank {
+    color:            white;
+    background-color: var(--nubank);
+    border-radius:    60px;
+    overflow:         hidden;
+    display:          flex;
+    flex-direction:   row;
+    justify-content:  center;
+    justify-items:    center;
+    font-size:        0.9rem;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+.btn-nubank:hover {
+    background-color: #7c61c7;
+    transform:        translateY(-2px);
+}
+.btn-nubank:active {
+    background-color: #4f3d7e;
+    transform:        translateY(0) scale(0.96);
+}
+
+.agendamento-content {
+    width:  100%;
+    /* height: 90vh; */
+    /* min-height: 100vh; */
+}
+.t-container {
+    width: 100%;
+    height: 100vh; /* remover para dar scroll na tela */
+}
+
+
+
+
+
+
+
+

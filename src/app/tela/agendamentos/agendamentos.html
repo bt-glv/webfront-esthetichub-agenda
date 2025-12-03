@@ -1,15 +1,57 @@
 
-<app-nav-bar></app-nav-bar>
+@if (popup.enabled) {
+    <div id="popup" (click)="popup.toggle()">
 
-<div class="row" style="background-color: black; width: 100%; height: 100%;">
+        <div (click)="$event.stopPropagation()">
+            @switch (popup.tela){
+                @case('profissional'){
+                    <app-selecionar-funcionario
+                        (fechar_tela)="popup.toggle()"
+                        (proxima_tela)='popup.trocar_tela("servico")'
+                        />
+                }
+                @case('servico'){
+                    <app-selecionar-servico
+                        (fechar_tela)="popup.toggle()"
+                        (proxima_tela)='popup.trocar_tela("horario")'
+                        />
+                }
+                @case('horario'){
+                    <app-selecionar-horario
+                        (fechar_tela)="popup.toggle()"
+                        (proxima_tela)='popup.trocar_tela("confirmacao")'
+                        />
+                }
+                @case('confirmacao'){
+                    <app-selecionar-confirmacao
+                        (fechar_tela)="popup.toggle()"
+                        (proxima_tela)='popup.toggle()'
+                        />
+                }
+            }
+        </div>
+    </div>
+}
+
+<div class="row flex-column t-container g-x-0 m-0 p-0">
+
+    <app-nav-bar class="m-0 p-0"/>
+
+    <div class="agendamento-content flex-grow-1 row flex-column justify-content-center align-items-center m-0 p-0" style="">
+
+        <div class="col-4 col-md-2">
+            <p>botão temporário</p>
+        </div>
+
+        <div class="btn-nubank col-4 col-md-1" (click)="popup.reset()">
+            abrir popup
+        </div>
+
+    </div>
+
+    <div class="p-0 m-0">
+        <app-footer/>
+    </div>
 
 </div>
-
-<div class="agendamento-content" style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-    <app-selecionar-funcionario></app-selecionar-funcionario>
-    <app-selecionar-servico></app-selecionar-servico>
-    <app-selecionar-horario></app-selecionar-horario>
-    <app-selecionar-confirmacao></app-selecionar-confirmacao>
-</div>
-
 

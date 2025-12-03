@@ -1,0 +1,18 @@
+
+.footer {
+    width:            100%;
+    background-color: black;
+    color:            #b8b8b8;
+    font-size:        0.7rem;
+}
+
+/* 0      -> xs */
+/* 540px  -> sm */
+/* 720px  -> md */
+/* 960px  -> lg */
+/* 1140px -> xl */
+@media (min-width: 540px) {
+    .footer{
+        font-size:        0.8rem;
+    }
+}
