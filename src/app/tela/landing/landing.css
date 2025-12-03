@@ -199,6 +199,16 @@ p.content-bar-textarea, div.content-bar-textarea {
 }
 
 
+.sobre {
+    font-size: 12px;
+}
 
+.contato {
+    font-size: 15px;
+}
 
+.horarios {
+    font-size: 11px;
+    padding-left: 10px;
+}
 
