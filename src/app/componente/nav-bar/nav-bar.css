@@ -6,6 +6,14 @@
   --text-dark: #333333;
 }
 
+.nav-container {
+    width: 100%;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+    /* margin-left: 10px; */
+    /* margin-right: 10px; */
+}
+
 .custom-navbar {
   background-color: var(--navbar-bg);
   padding: 15px 0;
@@ -16,17 +24,17 @@
 .nav-pill {
   background-color: var(--pill-bg);
   border-radius: 50px;
-  padding: 5px 20px 5px 5px;
+  /* padding: 5px 20px 5px 5px; */
   display: flex;
   align-items: center;
   height: 60px;
-  min-width: 220px;
+  /* min-width: 220px; */
 }
 
 .right-pill {
-  padding: 5px 10px 5px 20px;
+  /* padding: 5px 10px 5px 20px; */
   justify-content: flex-end;
-  min-width: auto;
+  /* min-width: auto; */
 }
 
 

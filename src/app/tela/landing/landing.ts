@@ -6,10 +6,11 @@ import { Router } from '@angular/router';
 
 import { Login } from '../../componente/login/login';
 import { PageCadastro } from '../../componente/cadastro/cadastro';
+import { Footer } from '../../componente/footer/footer';
 
 @Component({
   selector: 'landing',
-  imports: [NgOptimizedImage, Login, PageCadastro],
+  imports: [NgOptimizedImage, Login, PageCadastro, Footer],
   templateUrl: './landing.html',
   styleUrl: './landing.css',
 })

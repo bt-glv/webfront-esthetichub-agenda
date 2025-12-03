@@ -4,11 +4,13 @@ import { SelecionarHorario } from '../../componente/selecionar-horario/seleciona
 import { SelecionarServico } from '../../componente/selecionar-servico/selecionar-servico';
 import { SelecionarFuncionario } from '../../componente/selecionar-funcionario/selecionar-funcionario';
 import { SelecionarConfirmacao } from '../../componente/selecionar-confirmacao/selecionar-confirmacao';
+import { Footer } from '../../componente/footer/footer';
 
 @Component({
   selector: 'app-agendamentos',
   imports: [
       NavBar,
+      Footer,
       SelecionarHorario,
       SelecionarServico,
       SelecionarFuncionario,
