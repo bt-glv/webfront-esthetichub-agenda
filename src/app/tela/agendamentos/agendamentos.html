@@ -1,4 +1,3 @@
-<app-nav-bar></app-nav-bar>
 
 @if (popup.enabled) {
     <div id="popup" (click)="popup.toggle()">
@@ -34,15 +33,25 @@
     </div>
 }
 
-<div class="agendamento-content row flex-column justify-content-center align-items-center" style="">
+<div class="row flex-column t-container g-x-0 m-0 p-0">
 
-<div class="col-2">
-<p>botão temporário</p>
-</div>
+    <app-nav-bar class="m-0 p-0"/>
 
-<div class="btn-nubank col-2" (click)="popup.reset()">
-abrir popup
-</div>
-</div>
+    <div class="agendamento-content flex-grow-1 row flex-column justify-content-center align-items-center m-0 p-0" style="">
 
+        <div class="col-4 col-md-2">
+            <p>botão temporário</p>
+        </div>
+
+        <div class="btn-nubank col-4 col-md-1" (click)="popup.reset()">
+            abrir popup
+        </div>
+
+    </div>
+
+    <div class="p-0 m-0">
+        <app-footer/>
+    </div>
+
+</div>
 
