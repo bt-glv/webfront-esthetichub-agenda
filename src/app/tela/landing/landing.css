@@ -208,7 +208,13 @@ p.content-bar-textarea, div.content-bar-textarea {
 }
 
 .horarios {
-    font-size: 11px;
+    font-size: 10px;
     padding-left: 10px;
+    
 }
-
+.avaliacoes {
+    display: flex;
+    justify-content: center;   /* Centraliza horizontalmente */
+    align-items: center;       /* Centraliza verticalmente */
+    height: 200px;          /* ou 100vh se quiser a tela inteira */
+}

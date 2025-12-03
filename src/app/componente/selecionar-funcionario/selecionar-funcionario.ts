@@ -7,9 +7,7 @@ import { PopupCard } from '../popupCard';
     templateUrl: './selecionar-funcionario.html',
     styleUrl:    './selecionar-funcionario.css',
 })
-export class SelecionarFuncionario extends PopupCard {
-
-    
+export class SelecionarFuncionario extends PopupCard {    
 
     transform(lista: any[], texto: string): any[] {
     if (!texto) return lista;
@@ -18,6 +16,7 @@ export class SelecionarFuncionario extends PopupCard {
       item.nome.toLowerCase().includes(texto)
     );
   }
+
 
 
 

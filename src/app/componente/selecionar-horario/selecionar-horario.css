@@ -15,15 +15,21 @@ button {
    
 }
 
-.fechar {
-    text-align: right;
-     top: 15px;
-    right: 15px;
-    background-color: white;
-    width: 10%;    
-    position: absolute;    
-}
+.fechar{
+    position: absolute;
+    top: 10px;
+    right: 10px;
 
+    background: white;
+    border: 3px solid black;
+    border-radius: 4px;
+    padding: 1px 1px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 29px;
+
+    
+}
 
 
 
