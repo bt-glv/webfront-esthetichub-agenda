@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { PopupCard } from '../popupCard';
 import { Sessao } from '../../service/sessao';
 import { DbService } from '../../service/db-service';
+import { Profissional } from '../../models';
 
 @Component({
     selector:    'app-selecionar-funcionario',
@@ -16,5 +17,12 @@ export class SelecionarFuncionario extends PopupCard {
         private db: DbService
     ) { super(); }
 
-    private profissionais_lista = db
+    init = () => {
+        const profisionais_lista = this.db.getProfissionais().subscribe({
+            next: (data) => {},
+            error: (err) => {},
+            complete: () => {}
+        })
+    }
+
 }
