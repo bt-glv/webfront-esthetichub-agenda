@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Cliente } from '../models';
+import { Agendamento, Cliente } from '../models';
 import { DbService } from './db-service';
 import { HttpClient } from '@angular/common/http';
 
@@ -16,21 +16,17 @@ export class Sessao {
 
     public var = {
         usuario: () => { return this.usuario_cliente },
-        agendamento: {
-
-        }
+        agendamento: new Agendamento(),
     }
 
     public async login(usuario: string, senha: string): Promise<boolean> {
 
         const resposta = await this.db_service.checaUsuario(usuario, senha)
 
-
         if (resposta === undefined) {
             console.log('Login: Falha')
             return false
         }
-
 
         this.usuario_cliente = resposta as Cliente
         console.log('Login: Sucesso')

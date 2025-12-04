@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { DbService } from '../../service/db-service';
 import { Cliente } from '../../models';
 import { Sessao } from '../../service/sessao';
+import { PopupCard } from '../popupCard';
 
 
 
@@ -14,16 +15,15 @@ import { Sessao } from '../../service/sessao';
     templateUrl: './login.html',
     styleUrl: './login.css',
 })
-export class Login {
+export class Login extends PopupCard {
     constructor(
         private router: Router,
         private dbService: DbService,
         private sessao: Sessao
-    ){}
+    ){super();}
 
     @Output() open_cadastro    = new EventEmitter<void>()
     @Output() open_agendamento = new EventEmitter<void>()
-    @Output() fechar_tela      = new EventEmitter<void>()
 
     login: string = ''
     senha: string = ''
@@ -36,6 +36,8 @@ export class Login {
         console.log('senha:', this.senha);
 
         const login_res = await this.sessao.login(this.login, this.senha)
+
+        // TODO: colocar isso no codigo da tela de landing page
         if (login_res) {
             this.open_agendamento.emit();
             this.router.navigate(['/agendamentos'])
@@ -48,7 +50,8 @@ export class Login {
     }
 
     btnCadastro() { this.open_cadastro.emit() }
-    btnFechar()   { this.fechar_tela.emit() }
+    // override btnFechar()   { this.fechar_tela.emit() }
+
     btnTeste() {
         this.dbService.arrayProfissionais().then((profissionais) =>{
             console.log(profissionais);

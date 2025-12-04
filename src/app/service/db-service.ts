@@ -10,7 +10,9 @@ export class DbService {
 
     private readonly API_URL = 'http://localhost:3000';
 
-    constructor(private http: HttpClient) { }
+    constructor (
+        private http: HttpClient
+    ) { }
 
     // --- PROFISSIONAL ---
 
