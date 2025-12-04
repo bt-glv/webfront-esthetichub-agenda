@@ -1,3 +1,10 @@
+._body {
+      min-height: 544px !important;
+      width: 30vw;
+}
+
+
+
 button {
     padding-left: 30px;
     background-color: rgb(105, 84, 162, 0.2108);
