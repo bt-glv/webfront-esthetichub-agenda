@@ -1,6 +1,6 @@
 
-<body>
-    <button class="fechar" (click)="btnFechar($event)">×</button>
+<body class="_body row flex-column gy-3">
+     <button class="fechar" id="fecharElemento" (click)="btnFechar($event)">X</button>
 
     <br>
     <br>
@@ -10,7 +10,7 @@
     <br>
 
     <div class="date-container">
-        <div class="date-card selected">
+        <div class="date-card ">
             <span class="weekday">Seg.</span>
             <span class="date">17 de nov.</span>
         </div>
@@ -43,7 +43,7 @@
         <div class="date-card">
             <span class="hour">10:00</span>
         </div>
-        <div class="date-card selected">
+        <div class="date-card">
             <span class="hour">10:30  ✓</span>
         </div>
         <div class="date-card">

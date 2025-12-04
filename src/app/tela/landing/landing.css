@@ -106,13 +106,16 @@ p.content-bar-textarea, div.content-bar-textarea {
     margin-top: 0px !important;
 }
 #sobre {
-    height: 20vh;
+    min-height: 20vh;
+    height: auto;
 }
 #horarios {
-    height: 20vh;
+    min-height: 20vh;
+    height: auto;
 }
 #contato{
-    height: 20vh;
+    min-height: 20vh;
+    height: auto;
 }
 #avaliacoes{
     height: 40vh;
@@ -199,6 +202,28 @@ p.content-bar-textarea, div.content-bar-textarea {
 }
 
 
+.sobre {
+    font-size: 12px;
+}
+
+.contato {
+    font-size: 15px;
+}
+
+.horarios {
+    font-size: 10px;
+    padding-left: 10px;
+}
+@media (min-width: 1060px) {
+    .horarios {
+        font-size: 15px
+    }
+}
 
 
-
+.avaliacoes {
+    display: flex;
+    justify-content: center;   /* Centraliza horizontalmente */
+    align-items: center;       /* Centraliza verticalmente */
+    height: 200px;          /* ou 100vh se quiser a tela inteira */
+}
