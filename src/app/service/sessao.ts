@@ -12,7 +12,7 @@ export class Sessao {
         private db_service: DbService
     ){}
 
-    private usuario_cliente: Cliente|undefined = undefined
+    public usuario_cliente: Cliente|undefined = undefined
 
     public var = {
         usuario: () => { return this.usuario_cliente },
