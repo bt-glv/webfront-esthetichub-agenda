@@ -22,19 +22,23 @@ export class PageLanding {
         toggle: function() {
             this.enabled = !this.enabled
         },
-        content: null,
+        moverPara: (tela:string) => {
+            this.popup.tela = tela
+        }
+    }
+
+    teste(){
+        this.popup.tela = "Login"
     }
 
     abrirCadastro() {
         this.popup.tela = 'PageCadastro'
     }
-    abrirAgendamentos() {}
 
+    abrirAgendamentos() {
+        // TODO
+    }
 
-    visibilidade_login = false;
-    visibilidae_cadastro = false;
-
-    // chamadas botoes
     btnAgendamento() {
         console.log("agendamento")
         this.popup.tela = 'Login'

@@ -21,4 +21,10 @@ export abstract class PopupCard {
         event.stopPropagation()
         this.proxima_tela.emit()
     }
+
+    @Output() voltar_tela = new EventEmitter<void>()
+    btnVoltarTela(event: Event){
+        event.stopPropagation()
+        this.proxima_tela.emit()
+    }
 }

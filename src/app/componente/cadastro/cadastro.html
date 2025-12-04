@@ -1,6 +1,6 @@
 
 <body>
-<button class="fechar" (click)="btnFechar()">×</button>
+<button class="fechar" (click)="btnFechar($event)">×</button>
 <h2>Seja bem vindo!</h2>
     <h2>Cadastro</h2>
     <div class="campo-input">
@@ -27,6 +27,6 @@
             </button>
         </div>
         <br>
-        <button (click)="btnCadastrar()" class="acesso">Cadastrar </button>
+        <button (click)="btnCadastrar($event)" class="acesso">Cadastrar</button>
    </div>
 </body>

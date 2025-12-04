@@ -10,7 +10,9 @@ export class DbService {
 
     private readonly API_URL = 'http://localhost:3000';
 
-    constructor(private http: HttpClient) { }
+    constructor (
+        private http: HttpClient
+    ) { }
 
     // --- PROFISSIONAL ---
 
@@ -68,7 +70,7 @@ export class DbService {
     }
 
     gerarAgendamentoId(idProfissional: string, idCliente: string, servico: ServicoDetalhe): void {
-        const dataAgendamento = Date.now(); 
+        const dataAgendamento = Date.now();
         const idUnico = dataAgendamento.toString();
 
         forkJoin({
@@ -83,18 +85,18 @@ export class DbService {
                     return;
                 }
                 const dadosParaProfissional: AgendamentoDadosProfissional = {
-                    cliente: { 
-                        nome: cliente.nome, 
-                        telefone: cliente.telefone 
+                    cliente: {
+                        nome: cliente.nome,
+                        telefone: cliente.telefone
                     },
                     servico: servico
                 };
                 if (!profissional.agendamentos) profissional.agendamentos = {};
                 profissional.agendamentos[idUnico] = dadosParaProfissional;
                 const dadosParaCliente: AgendamentoDadosCliente = {
-                    profissional: { 
-                        nome: profissional.nome, 
-                        telefone: profissional.telefone 
+                    profissional: {
+                        nome: profissional.nome,
+                        telefone: profissional.telefone
                     },
                     servico: servico
                 };
@@ -117,12 +119,18 @@ export class DbService {
         });
     }
 
-    async checaUsuario(login: string, senha: string): Promise<Cliente | boolean> {
+    async checaUsuario(login: string, senha: string): Promise<Cliente | undefined> {
         const array = await firstValueFrom(this.getClientes());
-        
-        const usuarioEncontrado = array.find(element => 
+
+        const usuarioEncontrado = array.find(element =>
             element.nome === login && element.senha === senha
         );
-        return usuarioEncontrado || false; 
+
+        if (usuarioEncontrado == undefined)  { return undefined }
+        if(usuarioEncontrado.nome == '' && usuarioEncontrado.senha == '') {
+              return undefined
+        }
+
+        return usuarioEncontrado;
     }
 }
