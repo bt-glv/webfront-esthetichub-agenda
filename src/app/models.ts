@@ -38,8 +38,8 @@ export interface Cliente {
   agendamentos: Record<string, AgendamentoDadosCliente>;
 }
 
-export class Agendamento {
-    public profissional?: Profissional;
-    public servico?:      ServicoDetalhe;
-    public data_horario?: Date;
+export interface Agendamento {
+    profissional?: Profissional;
+    servico?:      ServicoDetalhe;
+    data_horario?: Date;
 }
