@@ -14,13 +14,13 @@
     --cinza-texto: #555555;
 }
 .container-servicos {
-    max-width: 350px; 
+    max-width: 350px;
     margin: 20px auto;
     font-family: Arial, sans-serif;
 }
 .container-servicos h1 {
     font-size: 24px;
-    font-weight: 600; 
+    font-weight: 600;
     color: #333;
     margin-bottom: 20px;
 }
@@ -30,12 +30,14 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
 }
 .lista-servicos-simples {
     display: flex;
     flex-direction: column;
-    gap: 5px; 
+    gap: 5px;
+    background-color: #f7f3f9;
+    /* padding: 20px; */
 }
 .item-servico-simples {
     margin-bottom: 15px;
@@ -92,7 +94,7 @@
     font-size: 24px;
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
+
 }
 
 .botao-final:hover .icone-check-grande,
@@ -105,7 +107,7 @@ body{
     padding: 20px;
     border-radius: 5%;
     background-color: #f7f2f9;
-    width: 30vw;
+    width: 25vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,9 +117,44 @@ body{
 .fechar{
     width: 30px;
     height: 30px;
-    background-color: white; 
-    border: 2px solid black; 
+    background-color: white;
+    border: 2px solid black;
     box-shadow: 2px 2px 0 0 black, -1px -1px 0 0 #555;
     position: right;
     margin-left: auto;
+}
+
+.selecao_servico{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+}
+.seleçãoCortes{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    cursor: pointer;
+
+}
+.nome-servico{
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    width: 75px;
+
+
+}
+.preco-servico{
+    font-size: 14px;
+    color: #666666;
+    margin-top: 2px;
+}
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
 }

@@ -8,14 +8,19 @@
 
         <!-- TODO: make it a bootstrap scrollable list -->
         <div class="lista-servicos-simples" style="overflow-y: auto;">
+            
 
             <ul class="list-group p-2" style="overflow-y:auto; overflow-x:hidden;" >
             @for(servico of lista_servico; track servico.titulo) {
-                <li class="item-servico-simples linha-servico row justify-content-between list-group-item" >
-                    <input type="checkbox" class="checkbox-servico">
+                <li class="selecao_servico row justify-content-between list-group-item" >
+                    <input type="checkbox" id="corteServico" class="checkbox-servico">
+                    <div class="info-servico">
+                    <label for="corteServico" class="seleçãoCortes">
                     <span class="col-4 nome-servico"> {{servico.titulo}} </span>
                     <span class="col-3 preco-servico"> R${{servico.preco}} </span>
                     <span class="col-3 nome-servico"> {{servico.duracao}}min </span>
+                    </label>
+                    </div>
                 </li>
             }
             </ul>
