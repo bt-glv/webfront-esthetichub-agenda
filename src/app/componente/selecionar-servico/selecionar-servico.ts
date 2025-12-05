@@ -1,7 +1,10 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PopupCard } from '../popupCard';
+import { DbService } from '../../service/db-service';
 import { Sessao } from '../../service/sessao';
+
+
 import { ServicoDetalhe } from '../../models';
 
 @Component({
@@ -10,14 +13,15 @@ import { ServicoDetalhe } from '../../models';
     templateUrl: './selecionar-servico.html',
     styleUrl: './selecionar-servico.css',
 })
-export class SelecionarServico extends PopupCard {
+export class SelecionarServico extends PopupCard implements OnInit {
 
-    constructor(
-        private sessao: Sessao,
-    ){super();}
 
     lista_servico: ServicoDetalhe[]|undefined;
     fechado = false;
+    constructor (
+        private sessao: Sessao,
+        private db: DbService
+    ) { super(); }
 
     onFinalizarClick() {
         alert('Serviços selecionados!');
@@ -27,10 +31,12 @@ export class SelecionarServico extends PopupCard {
     }
 
     ngOnInit() {
+        console.log(this.sessao.var.agendamento());
         console.log("oninit")
-        this.sessao.mockInit() // TODO: remover
-        this.lista_servico = this.sessao.var.agendamento.profissional?.lista_servico
         console.log(this.lista_servico)
+
+        this.lista_servico = this.sessao.var.agendamento().profissional?.lista_servico
+        // this.sessao.mockInit() // TODO: remover
     }
 
     // olhar "popupCard.ts" para a funcionalidade dos botões
