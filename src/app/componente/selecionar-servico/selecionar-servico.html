@@ -1,40 +1,24 @@
 <body>
     <button class="fechar" id="fecharElemento" (click)="btnFechar($event)">X</button>
     <div class="container-servicos">
-        <h1>Escolha um ou mais serviços</h1>
+        <h1 class="mb-5">Escolha um ou mais serviços</h1>
 
-        <input type="text" placeholder="Pesquise" class="campo-pesquisa">
+        <!-- pesquisa não implementada ainda -->
+        <!-- <input type="text" placeholder="Pesquise" class="campo-pesquisa"> -->
 
-        <div class="lista-servicos-simples">
+        <!-- TODO: make it a bootstrap scrollable list -->
+        <div class="lista-servicos-simples" style="overflow-y: auto;">
 
-            <div class="item-servico-simples linha-servico">
-                <input type="checkbox" class="checkbox-servico">
-                <div class="info-servico">
-                    <span class="nome-servico">CORTE INFANTIL</span>
-                    <span class="preco-servico">R$35,00</span>
-                </div>
-            </div>
-            <div class="item-servico-simples linha-servico">
-                <input type="checkbox" class="checkbox-servico">
-                <div class="info-servico">
-                    <span class="nome-servico">HIDRATAÇÃO</span>
-                    <span class="preco-servico">R$50,00</span>
-                </div>
-            </div>
-            <div class="item-servico-simples linha-servico">
-                <input type="checkbox" class="checkbox-servico">
-                <div class="info-servico">
-                    <span class="nome-servico">BARBA</span>
-                    <span class="preco-servico">R$35,00</span>
-                </div>
-            </div>
-            <div class="item-servico-simples linha-servico">
-                <input type="checkbox" class="checkbox-servico">
-                <div class="info-servico">
-                    <span class="nome-servico">SOMBRANCELHA</span>
-                    <span class="preco-servico">R$20,00</span>
-                </div>
-            </div>
+            <ul class="list-group p-2" style="overflow-y:auto; overflow-x:hidden;" >
+            @for(servico of lista_servico; track servico.titulo) {
+                <li class="item-servico-simples linha-servico row justify-content-between list-group-item" >
+                    <input type="checkbox" class="checkbox-servico">
+                    <span class="col-4 nome-servico"> {{servico.titulo}} </span>
+                    <span class="col-3 preco-servico"> R${{servico.preco}} </span>
+                    <span class="col-3 nome-servico"> {{servico.duracao}}min </span>
+                </li>
+            }
+            </ul>
 
             <button type="button" class="botao-final" (click)="btnProximaTela($event)">
                 <span class="icone-check-grande">✓</span>
