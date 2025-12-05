@@ -5,7 +5,6 @@ import { DbService } from '../../service/db-service';
 import { Sessao } from '../../service/sessao';
 
 
-import { Sessao } from '../../service/sessao';
 import { ServicoDetalhe } from '../../models';
 
 @Component({
@@ -16,9 +15,6 @@ import { ServicoDetalhe } from '../../models';
 })
 export class SelecionarServico extends PopupCard implements OnInit {
 
-    constructor(
-        private sessao: Sessao,
-    ){super();}
 
     lista_servico: ServicoDetalhe[]|undefined;
     fechado = false;
@@ -26,10 +22,6 @@ export class SelecionarServico extends PopupCard implements OnInit {
         private sessao: Sessao,
         private db: DbService
     ) { super(); }
-
-    ngOnInit() {
-        console.log(this.sessao.var.agendamento());
-    }
 
     onFinalizarClick() {
         alert('Serviços selecionados!');
@@ -39,10 +31,12 @@ export class SelecionarServico extends PopupCard implements OnInit {
     }
 
     ngOnInit() {
+        console.log(this.sessao.var.agendamento());
         console.log("oninit")
-        this.sessao.mockInit() // TODO: remover
-        this.lista_servico = this.sessao.var.agendamento.profissional?.lista_servico
         console.log(this.lista_servico)
+
+        this.lista_servico = this.sessao.var.agendamento().profissional?.lista_servico
+        // this.sessao.mockInit() // TODO: remover
     }
 
     // olhar "popupCard.ts" para a funcionalidade dos botões
