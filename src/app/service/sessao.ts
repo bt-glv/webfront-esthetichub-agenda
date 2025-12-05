@@ -13,10 +13,11 @@ export class Sessao {
     ){}
 
     public usuario_cliente: Cliente|undefined = undefined
-
+    public agendamento_atual: Agendamento|undefined = undefined
+    
     public var = {
-        usuario: () => { return this.usuario_cliente },
-        agendamento: new Agendamento(),
+        usuario: () => { return this.usuario_cliente as Cliente },
+        agendamento: () => { return this.agendamento_atual as Agendamento },
     }
 
     public async login(usuario: string, senha: string): Promise<boolean> {

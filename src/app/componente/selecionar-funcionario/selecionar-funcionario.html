@@ -1,51 +1,31 @@
-
 <body class="_body row flex-column gy-3">
 
-    <!-- <button class="fechar"  (click)="btnFechar($event)">×</button> -->
     <button class="fechar" id="fecharElemento" (click)="btnFechar($event)">X</button>
     <h4>Escolha um funcionário...</h4>
-    <!-- <div>
-        <input type="text" placeholder="Mayke(Barbeiro)">
-        </div> -->
 
-<div class="option-box">
-  <label class="tag-checkbox">
-    <input type="checkbox" />
-    <span class="custom-box">✓</span>
-    Marco Aurelio (Barbeiro)
-  </label>
-</div>
-     <br>   
-   <div class="option-box">
-  <label class="tag-checkbox">
-    <input type="checkbox" />
-    <span class="custom-box">✓</span>
-    João da Silva (Barbeiro)
-  </label>
-</div>
-    <br>
-    <div class="worker-box">
-  <label class="tag-checkbox">
-    <input type="checkbox" />
-    <span class="custom-box">✓</span>
-    Ricardo (Barbeiro)
-  </label>
-</div>
-    <br>
-    <div class="option-box">
-  <label class="tag-checkbox">
-    <input type="checkbox" />
-    <span class="custom-box">✓</span>
-   Jaqueline (Cabelereira)
-  </label>
-</div>
-    <br>
-    
-
-        <button class="round-btn" (click)="btnProximaTela($event)">  ✓ </button>
-
-
-
+    <div class="option-box" *ngFor="let prof of listaProfissionais">
+      <label class="tag-checkbox">
         
-</body>
+        <input 
+            type="radio" 
+            name="grupoProfissionais" 
+            [(ngModel)]="idSelecionado" 
+            [value]="prof.id" 
+        />
+        
+        <span class="custom-box">✓</span>
+        {{ prof.nome }}
+      
+      </label>
+    </div>
 
+    <br>
+
+    <button 
+        class="round-btn" 
+        (click)="btnProximaTela($event)"
+        [disabled]="!idSelecionado"> 
+        ✓ 
+    </button>
+
+</body>
